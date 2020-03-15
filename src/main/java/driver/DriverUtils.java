@@ -4,9 +4,8 @@ import driver.manager.DriverManagerFactory;
 
 public class DriverUtils extends DriverManagerFactory {
 	
-	public void maximumBrowser() {
+	public static void maximumBrowser() {
 		getDriver().manage().window().maximize();
 	}
-	
 	
 }

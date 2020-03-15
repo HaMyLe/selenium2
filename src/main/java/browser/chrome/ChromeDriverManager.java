@@ -12,8 +12,7 @@ public class ChromeDriverManager extends DriverManager {
 	public void createWebDriver() {
 		WebDriverManager.chromedriver().setup();
 		ChromeOptions options = new ChromeOptions();
-		this.driver = new ChromeDriver(options);
-			
+		this.driver = new ChromeDriver(options);	
 	}
 
 }

@@ -1,5 +1,6 @@
 package SeleLv2.testcases;
 
+import org.apache.commons.logging.Log;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -13,11 +14,10 @@ import utils.Constants;
 public class BaseTest {
 	DriverManager driverManager;
 	WebDriver driver;
-	DriverUtils driverUtils;
+	Log log4j;
 	
 	@BeforeMethod
 	public void setUp() {
-		System.out.println("Pre-condition");
 		driverManager = DriverManagerFactory.getDriverManager(DriverType.CHROME);
 		driver = driverManager.getWebDriver();
 		openBrowser();
@@ -25,13 +25,12 @@ public class BaseTest {
 	
 	@AfterMethod
 	public void tearDown() {
-		System.out.println("Post-condition");
 		driver.quit();
 	}
 	
 	public void openBrowser() {
 		driver.get(Constants.URL);
-		driverUtils.maximumBrowser();
+		DriverUtils.maximumBrowser();
 	}
 
 }

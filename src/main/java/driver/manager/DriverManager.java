@@ -1,6 +1,6 @@
 package driver.manager;
 
-import org.openqa.selenium.WebDriver;;
+import org.openqa.selenium.WebDriver;
 
 public abstract class DriverManager {
 	protected WebDriver driver;
