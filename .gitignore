@@ -1,0 +1,5 @@
+.project
+.prefs
+test-output/
+.settings/
+target/

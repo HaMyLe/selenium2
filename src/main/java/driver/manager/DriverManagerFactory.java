@@ -10,6 +10,8 @@ import browser.ie.IEDriverManager;;
 public class DriverManagerFactory {
 	
 	protected static DriverManager driverManager;
+	private static int timeOut = 30;
+	
 	public static DriverManager getDriverManager(DriverType type) {
 		
 		switch (type) {
@@ -29,4 +31,12 @@ public class DriverManagerFactory {
 	public static WebDriver getDriver() {
 		return driverManager.getWebDriver();
 	}
+	
+	/**
+	 * @return the timeOut
+	 */
+	public static int getTimeOut() {
+		return timeOut;
+	}
+	
 }
