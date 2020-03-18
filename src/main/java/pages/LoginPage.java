@@ -12,7 +12,15 @@ public class LoginPage {
 	public void loginDA(String username, String password) {
 		txtUsername.enter(username);
 		txtPassword.enter(password);
-		btnLogin.click();
+		try {
+			Thread.sleep(2000);
+			btnLogin.click();
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
-
+	
+	
 }

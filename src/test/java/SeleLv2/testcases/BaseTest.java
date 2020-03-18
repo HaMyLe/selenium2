@@ -27,8 +27,8 @@ public class BaseTest {
 	}
 	
 	public void openBrowser() {
-		driver.get(Constants.URL);
 		DriverUtils.maximumBrowser();
+		driver.get(Constants.URL);
 	}
 
 }

@@ -1,5 +1,6 @@
 package driver;
 
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.JavascriptExecutor;
 
 import driver.manager.DriverManagerFactory;
@@ -18,4 +19,11 @@ public class DriverUtils extends DriverManagerFactory {
         return DriverManagerFactory.getTimeOut();
     }
 	
+	public static Alert switchToAlert() {
+		return getDriver().switchTo().alert();
+	}
+	
+	public static String getTextAlert() {
+		return switchToAlert().getText();
+	}
 }
