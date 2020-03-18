@@ -17,46 +17,49 @@ public class LoginTC6_10 extends BaseTest {
 	
 	@Test
 	public void DA_LOGIN_TC006() throws InterruptedException {
-	  log.info("Verify that Password input is case sensitive");
+	  log.info("DA_LOGIN_TC006: Verify that Password input is case sensitive");
 	  
-	  loginPage.loginDA(Constants.TEST_LOWERCASE_PASSWORD, Constants.TEST_UPPERCASE_PASSWORD);
-	  Assert.assertEquals(homePage.getTextHomePage(),Constants.TEST_LOWERCASE_PASSWORD);
+	  loginPage.loginDA(Constants.TC006_USERNAME, Constants.TC006_UPPERCASE_PASSWORD);
+	  Assert.assertEquals(DriverUtils.getTitle(),Constants.TITLE_DASHBOARD);
 	  homePage.logoutAccount();
-	  loginPage.loginDA(Constants.TEST_LOWERCASE_USER, Constants.TEST_LOWERCASE_PASSWORD);
-	  Assert.assertEquals(DriverUtils.getTextAlert(), Constants.USERNAME_PASS_INVALID_MESS);
+	  loginPage.loginDA(Constants.TC006_USERNAME, Constants.TC006_LOWERCASE_PASSWORD);
+	  Assert.assertEquals(loginPage.getTextAlert(), Constants.INVALID_USERNAME_PASS_MSG);
 	 }
 	
-//	@Test
-//	public void DA_LOGIN_TC007() {
-//	  log.info("Verify that Username is not case sensitive");
-//	  loginPage.loginDA(Constants.TEST_USER, Constants.UPPERCASE_PASSWORD);
-//	  Assert.assertEquals(homePage.getTextHomePage(),Constants.USERNAME);
-//	
-//	 }
-//	
-//	@Test
-//	public void DA_LOGIN_TC008() {
-//	  log.info("Verify that password with special characters is working correctly");
-//	  loginPage.loginDA(Constants.TEST_USER, Constants.UPPERCASE_PASSWORD);
-//	  Assert.assertEquals(homePage.getTextHomePage(),Constants.USERNAME);
-//	
-//	 }
-//	
-//	@Test
-//	public void DA_LOGIN_TC009() {
-//	  log.info("Verify that username with special characters is working correctly");
-//	  loginPage.loginDA(Constants.TEST_USER, Constants.UPPERCASE_PASSWORD);
-//	  Assert.assertEquals(homePage.getTextHomePage(),Constants.USERNAME);
-//	
-//	 }
-//	
-//	@Test
-//	public void DA_LOGIN_TC010() {
-//	  log.info("Verify that Password input is case sensitive");
-//	  loginPage.loginDA(Constants.TEST_USER, Constants.UPPERCASE_PASSWORD);
-//	  Assert.assertEquals(homePage.getTextHomePage(),Constants.USERNAME);
-//	
-//	 }
+	@Test
+	public void DA_LOGIN_TC007() {
+	  log.info("DA_LOGIN_TC007: Verify that Username is not case sensitive");
+	  
+	  loginPage.loginDA(Constants.TC007_UPPERCASE_USERNAME, Constants.TC007_PASSWORD);
+	  Assert.assertEquals(DriverUtils.getTitle(),Constants.TITLE_DASHBOARD);
+	  homePage.logoutAccount();
+	  loginPage.loginDA(Constants.TC007_LOWERCASE_USERNAME, Constants.TC007_PASSWORD);
+	  Assert.assertEquals(DriverUtils.getTitle(),Constants.TITLE_DASHBOARD);
+	 }
+	
+	@Test
+	public void DA_LOGIN_TC008() {
+	  log.info("DA_LOGIN_TC008: Verify that password with special characters is working correctly");
+	  
+	  loginPage.loginDA(Constants.TC008_USERNAME, Constants.TC008_PASSWORD);
+	  Assert.assertEquals(DriverUtils.getTitle(),Constants.TITLE_DASHBOARD);
+	 }
+	
+	@Test
+	public void DA_LOGIN_TC009() {
+	  log.info("DA_LOGIN_TC009: Verify that username with special characters is working correctly");
+	  
+	  loginPage.loginDA(Constants.TC009_USERNAME, Constants.TC009_PASSWORD);
+	  Assert.assertEquals(DriverUtils.getTitle(),Constants.TITLE_DASHBOARD);
+	 }
+	
+	@Test
+	public void DA_LOGIN_TC010() {
+	  log.info("DA_LOGIN_TC010: Verify that Password input is case sensitive");
+	  
+	  loginPage.clickBtnLogin();
+	  Assert.assertEquals(DriverUtils.getTextAlert(),Constants.EMPTY_USERNAME_MSG);
+	 }
 	
 }
 

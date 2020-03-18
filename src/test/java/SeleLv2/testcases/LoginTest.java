@@ -19,7 +19,7 @@ public class LoginTest extends BaseTest {
 	  log4j.info("Verify that user can login specific repository successfully via Dashboard login page with correct credentials");
 	  
 	  loginPage.loginDA(Constants.USERNAME, Constants.PASSWORD);
-	  Assert.assertEquals(homePage.getTextHomePage(),Constants.USERNAME);
+	  Assert.assertEquals(homePage.getUserName(),Constants.USERNAME);
 		  
 	 }
 }

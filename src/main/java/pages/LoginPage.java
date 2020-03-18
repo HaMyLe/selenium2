@@ -2,6 +2,7 @@ package pages;
 
 import controls.common.Button;
 import controls.common.TextBox;
+import driver.DriverUtils;
 
 public class LoginPage {
 	
@@ -12,15 +13,16 @@ public class LoginPage {
 	public void loginDA(String username, String password) {
 		txtUsername.enter(username);
 		txtPassword.enter(password);
-		try {
-			Thread.sleep(2000);
-			btnLogin.click();
-			Thread.sleep(2000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		clickBtnLogin();
 	}
 	
 	
+	public void clickBtnLogin() {
+		btnLogin.click();
+	}
+	
+	public String getTextAlert() {
+		btnLogin.waitForAlert();
+		return DriverUtils.getTextAlert();
+	}
 }
