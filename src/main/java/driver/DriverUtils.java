@@ -2,11 +2,17 @@ package driver;
 
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import driver.manager.DriverManagerFactory;
 
 public class DriverUtils extends DriverManagerFactory {
 	
+	public static void waitForAlert(int timeOutInSeconds) {
+    	WebDriverWait wait = new WebDriverWait(getDriver(), timeOutInSeconds);
+    	wait.until(ExpectedConditions.alertIsPresent());
+    }
 	public static void maximumBrowser() {
 		getDriver().manage().window().maximize();
 	}
@@ -25,6 +31,7 @@ public class DriverUtils extends DriverManagerFactory {
 	}
 	
 	public static String getTextAlert() {
+		waitForAlert(3);
 		return switchToAlert().getText();
 	}
 	

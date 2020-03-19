@@ -12,7 +12,7 @@ public class LoginPage {
 	Button btnLogin = new Button("//div[@class='btn-login']");
 	ComboBox cbbRepo = new ComboBox("id=repository");
 
-	public void loginDA(String username, String password, String repo) {
+	public void loginDA(String username, String password, String repo)  {
 		txtUsername.enter(username);
 		txtUsername.waitForDisplay();
 		txtPassword.enter(password);
@@ -22,14 +22,16 @@ public class LoginPage {
 			cbbRepo.select(repo);
 		}
 		clickBtnLogin();
+		
 	}
 
-	public void loginDA(String username, String password) {
+	public void loginDA(String username, String password)   {
 		loginDA(username, password, null);
 	}
 
 	public void clickBtnLogin() {
-		btnLogin.click();
+		btnLogin.waitForVisibility();
+		btnLogin.click();		
 	}
 	
 	public String getTextAlert() {

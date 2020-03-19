@@ -8,18 +8,19 @@ import pages.HomePage;
 import pages.LoginPage;
 import utils.Constants;
 
-public class DA_LOGIN_TC005_MISSING_LOGIN_DIALOG_WHEN_SWITCHING_REPO {
+public class DA_LOGIN_TC004_Login_with_diff_repo extends BaseTest {
 	private static Logger log = Logger.getLogger(LoginTest.class);
 	LoginPage loginPage = new LoginPage();
 	HomePage homePage = new HomePage();
 
 	@Test
-	public void DA_LOGIN_TC003() throws InterruptedException {
-		log.info("Verify that there is no Login dialog when switching between 2 repositories with the same account");
-
+	public void DA_LOGIN_TC004() {
+		log.info(
+				"Verify that user is able to log in different repositories successfully after logging out current repository");
 		loginPage.loginDA(Constants.USERNAME, "", Constants.SAMPLE_REPO_NAME);
-		homePage.selectRepo(Constants.TEST_REPO_NAME);
+		homePage.logoutAccount();
 		loginPage.loginDA(Constants.USERNAME, "", Constants.TEST_REPO_NAME);
-		Assert.assertEquals(homePage.getTextRepo(), Constants.TEST_REPO_NAME);
+		Assert.assertEquals(homePage.getUserName(), Constants.USERNAME);
+		homePage.logoutAccount();
 	}
 }

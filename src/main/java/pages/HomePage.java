@@ -1,7 +1,6 @@
 package pages;
 
 
-import controls.common.ComboBox;
 import controls.common.Link;
 
 public class HomePage extends GeneralPage{
@@ -10,7 +9,9 @@ public class HomePage extends GeneralPage{
 	private Link lnkUser= new Link("//a[@href='#Welcome']");
 	private Link lnkLogout = new Link("//a[text()='Logout']");
 	private Link lnkTitle = new Link("//title[contains(.,'TestArchitect')]");
-	private ComboBox cbbRepo = new ComboBox("id=ulListRepositories");
+	private Link lnkRepo = new Link("//a[contains(.,'Repository')]/span");
+	//a[.='Repository: SampleRepository']
+	private Link lnkRepoName = new Link("//a[.='%s']");	
 	 
 	 public String getUserName() {
 		 lnkUser.waitForDisplay();
@@ -29,13 +30,24 @@ public class HomePage extends GeneralPage{
 		 return lnkTitle.getText();
 	 }
 	 
-	 public void selectRepo(String repo) {
-		 cbbRepo.select(repo);
-		 cbbRepo.waitForDisplay();
+	 public void selectRepo(String repo) throws InterruptedException {		 
+		 lnkRepo.waitForVisibility();
+		 lnkRepo.click();		 
+		 lnkRepoName.setDynamicValue(repo);
+		 lnkRepoName.waitForVisibility();		
+		 lnkRepoName.click();	 
 	 }
-	 public String getTextRepo() {
-		 cbbRepo.waitForDisplay();
-		 return cbbRepo.getText();
-	 }
+
+	public String getTextRepo() {
+		try {
+			Thread.sleep(1000);
+			lnkRepo.waitForVisibility();
+			return lnkRepo.getText();
+
+		} catch (Exception e) {
+
+		}
+		return "";
+	}
 
 }
