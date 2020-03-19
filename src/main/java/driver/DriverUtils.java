@@ -21,6 +21,7 @@ public class DriverUtils extends DriverManagerFactory {
 	
 	public static Alert switchToAlert() {
 		return getDriver().switchTo().alert();
+		
 	}
 	
 	public static String getTextAlert() {
