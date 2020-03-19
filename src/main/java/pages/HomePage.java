@@ -28,7 +28,7 @@ public class HomePage extends GeneralPage {
 	private Link lnkDynamicNewPage = new Link("//div[@id='main-menu']//a[text()='%s']");
 	private Link lnkDynamicPositionBeside = new Link("//li[@class='active']/preceding-sibling::li/a[text()='%s']");
 	private ComboBox cbbRepo = new ComboBox("id=ulListRepositories");
-	
+
 	public String getUserName() {
 		 lnkUser.waitForDisplay();
 		 return lnkUser.getText();
@@ -165,4 +165,3 @@ public class HomePage extends GeneralPage {
 		selectItemsSetting(item);
 	}
 }
-
