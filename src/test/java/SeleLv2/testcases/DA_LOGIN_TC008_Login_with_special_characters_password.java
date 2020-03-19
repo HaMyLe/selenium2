@@ -8,7 +8,7 @@ import pages.HomePage;
 import pages.LoginPage;
 import utils.Constants;
 
-public class DA_LOGIN_TC008_Login_with_special_characters_password {
+public class DA_LOGIN_TC008_Login_with_special_characters_password extends BaseTest {
 	
 	private static Logger log = Logger.getLogger(LoginTest.class);
 	LoginPage loginPage = new LoginPage();

@@ -8,7 +8,7 @@ import pages.HomePage;
 import pages.LoginPage;
 import utils.Constants;
 
-public class DA_LOGIN_TC010_Login_without_username_and_password {
+public class DA_LOGIN_TC010_Login_without_username_and_password extends BaseTest {
 	
 	private static Logger log = Logger.getLogger(LoginTest.class);
 	LoginPage loginPage = new LoginPage();
