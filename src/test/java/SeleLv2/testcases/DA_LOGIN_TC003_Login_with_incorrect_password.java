@@ -9,7 +9,7 @@ import pages.HomePage;
 import pages.LoginPage;
 import utils.Constants;
 
-public class DA_LOGIN_TC003_LOGIN_WITH_INCORRECT_PASSWORD extends BaseTest{
+public class DA_LOGIN_TC003_Login_with_incorrect_password extends BaseTest{
 	private static Logger log = Logger.getLogger(LoginTest.class);
 	LoginPage loginPage = new LoginPage();
 	HomePage homePage = new HomePage();
@@ -19,7 +19,6 @@ public class DA_LOGIN_TC003_LOGIN_WITH_INCORRECT_PASSWORD extends BaseTest{
 		log.info("Verify that user fails to log in specific repository successfully via Dashboard login page with correct username and incorrect password");
 
 		loginPage.loginDA(Constants.USERNAME, Constants.INVALID_PASSWORD,Constants.SAMPLE_REPO_NAME);
-		Assert.assertEquals(DriverUtils.getTextAlert(), Constants.INVALID_USERNAME_PASS_MSG);
-		homePage.logoutAccount();
+		Assert.assertEquals(DriverUtils.getTextAlert(), Constants.INVALID_USERNAME_PASS_MSG);		
 	}
 }
