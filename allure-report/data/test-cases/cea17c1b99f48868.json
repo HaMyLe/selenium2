@@ -1,0 +1,86 @@
+{
+  "uid" : "cea17c1b99f48868",
+  "name" : "DA_LOGIN_TC002",
+  "fullName" : "SeleLv2.testcases.DA_LOGIN_TC002_Login_with_invalid_credentials.DA_LOGIN_TC002",
+  "historyId" : "61097693a77aea203a06a2fa321fda57",
+  "time" : {
+    "start" : 1585051650244,
+    "stop" : 1585051652331,
+    "duration" : 2087
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "setUp",
+    "time" : {
+      "start" : 1585051634823,
+      "stop" : 1585051649726,
+      "duration" : 14903
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "afterStages" : [ {
+    "name" : "tearDown",
+    "time" : {
+      "start" : 1585051652395,
+      "stop" : 1585051653466,
+      "duration" : 1071
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : "SeleLv2.testcases.DA_LOGIN_TC002_Login_with_invalid_credentials"
+  }, {
+    "name" : "testClass",
+    "value" : "SeleLv2.testcases.DA_LOGIN_TC002_Login_with_invalid_credentials"
+  }, {
+    "name" : "testMethod",
+    "value" : "DA_LOGIN_TC002"
+  }, {
+    "name" : "parentSuite",
+    "value" : "Default suite"
+  }, {
+    "name" : "suite",
+    "value" : "Default test"
+  }, {
+    "name" : "subSuite",
+    "value" : "SeleLv2.testcases.DA_LOGIN_TC002_Login_with_invalid_credentials"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-84VFAEK"
+  }, {
+    "name" : "thread",
+    "value" : "14068@DESKTOP-84VFAEK.main(1)"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "cea17c1b99f48868.json",
+  "parameterValues" : [ ]
+}

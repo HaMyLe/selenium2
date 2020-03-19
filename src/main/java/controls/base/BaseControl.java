@@ -114,7 +114,7 @@ public class BaseControl {
         return this.byLocator;
     }
     
-    public String getText() throws Exception {
+    public String getText(){
         try {
             logger.debug(String.format("Get text of element %s", getLocator().toString()));
             return getElement().getText();
@@ -216,5 +216,4 @@ public class BaseControl {
             return false;
         }
     }
-    
 }

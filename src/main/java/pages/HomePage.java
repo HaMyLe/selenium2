@@ -27,43 +27,34 @@ public class HomePage extends GeneralPage {
 	private Button btnCancelButton = new Button("id=Cancel");
 	private Link lnkDynamicNewPage = new Link("//div[@id='main-menu']//a[text()='%s']");
 	private Link lnkDynamicPositionBeside = new Link("//li[@class='active']/preceding-sibling::li/a[text()='%s']");
-
-	public String getUserName() throws Exception {
-		lnkUser.waitForDisplay();
-		return lnkUser.getText();
-	}
+	private ComboBox cbbRepo = new ComboBox("id=ulListRepositories");
+	
+	public String getUserName() {
+		 lnkUser.waitForDisplay();
+		 return lnkUser.getText();
+	 }
 
 	public void logoutAccount() {
-		lnkUser.waitForDisplay();
-		lnkUser.click();
-		lnkLogout.waitForDisplay();
-		lnkLogout.click();
-	}
-
-	public String getTitle() throws Exception {
-		lnkTitle.waitForVisibility();
-		return lnkTitle.getText();
-	}
-
-	public void selectRepo(String repo) throws InterruptedException {
-		lnkRepo.waitForVisibility();
-		lnkRepo.click();
-		lnkRepoName.setDynamicValue(repo);
-		lnkRepoName.waitForVisibility();
-		lnkRepoName.click();
-	}
+		 lnkUser.waitForDisplay();
+		 lnkUser.click();
+		 lnkLogout.waitForDisplay();
+		 lnkLogout.click();
+	 }
+	 
+	 public String getTitle() {
+		 lnkTitle.waitForVisibility();
+		 return lnkTitle.getText();
+	 }
+	 
+	 public void selectRepo(String repo) {
+		 cbbRepo.select(repo);
+		 cbbRepo.waitForDisplay();
+	 }
 
 	public String getTextRepo() {
-		try {
-			Thread.sleep(1000);
-			lnkRepo.waitForVisibility();
-			return lnkRepo.getText();
-
-		} catch (Exception e) {
-
-		}
-		return "";
-	}
+		 cbbRepo.waitForDisplay();
+		 return cbbRepo.getText();
+	 }
 
 	public void clickIconSetting() {
 		lnkGlobalIcon.waitForVisibility();
@@ -173,5 +164,5 @@ public class HomePage extends GeneralPage {
 		lnkDynamicNewPage.click();
 		selectItemsSetting(item);
 	}
-
 }
+

@@ -1,0 +1,82 @@
+{
+  "uid" : "4b4757e66a1912dae1a509f688f20b0f",
+  "name" : "categories",
+  "children" : [ {
+    "name" : "Test defects",
+    "children" : [ {
+      "name" : "java.lang.NullPointerException",
+      "children" : [ {
+        "name" : "DA_LOGIN_TC010",
+        "uid" : "79bf6da619fa2b56",
+        "parentUid" : "5592898b36d684905e31486a23088bda",
+        "status" : "broken",
+        "time" : {
+          "start" : 1585052331432,
+          "stop" : 1585052331503,
+          "duration" : 71
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "5592898b36d684905e31486a23088bda"
+    }, {
+      "name" : "Session ID is null. Using WebDriver after calling quit()?\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'DESKTOP-84VFAEK', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_231'\nDriver info: driver.version: RemoteWebDriver",
+      "children" : [ {
+        "name" : "DA_LOGIN_TC008",
+        "uid" : "76869e29903b573d",
+        "parentUid" : "10e2657f9a62f863eadf9f77066177df",
+        "status" : "broken",
+        "time" : {
+          "start" : 1585052428182,
+          "stop" : 1585052428194,
+          "duration" : 12
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "DA_LOGIN_TC007",
+        "uid" : "29291631ab90d0b9",
+        "parentUid" : "10e2657f9a62f863eadf9f77066177df",
+        "status" : "broken",
+        "time" : {
+          "start" : 1585052428209,
+          "stop" : 1585052428215,
+          "duration" : 6
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "DA_LOGIN_TC009",
+        "uid" : "3e56149cf869d08b",
+        "parentUid" : "10e2657f9a62f863eadf9f77066177df",
+        "status" : "broken",
+        "time" : {
+          "start" : 1585052428280,
+          "stop" : 1585052428304,
+          "duration" : 24
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "DA_LOGIN_TC006",
+        "uid" : "85f7ca38aa6a7b5b",
+        "parentUid" : "10e2657f9a62f863eadf9f77066177df",
+        "status" : "broken",
+        "time" : {
+          "start" : 1585052441467,
+          "stop" : 1585052441471,
+          "duration" : 4
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "10e2657f9a62f863eadf9f77066177df"
+    } ],
+    "uid" : "bdbf199525818fae7a8651db9eafe741"
+  } ]
+}
