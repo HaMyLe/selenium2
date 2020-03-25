@@ -9,7 +9,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
 import driver.DriverUtils;
 
 public class BaseControl {
@@ -155,4 +154,27 @@ public class BaseControl {
         }
     }
     
+    public void waitForVisibility(int timeOutInSeconds) {
+        try {
+            logger.info(String.format("Wait for control's visibility %s", getLocator().toString()));
+            WebDriverWait wait = new WebDriverWait(getDriver(), timeOutInSeconds);
+            wait.until(ExpectedConditions.visibilityOfElementLocated(getLocator()));
+        } catch (Exception e) {
+            logger.error(String.format("waitForVisibility: Has error with control '%s': %s", getLocator().toString(),
+                    e.getMessage().split("\n")[0]));
+        }
+    }
+    
+    public void waitForVisibility() {
+        waitForVisibility(DriverUtils.getTimeOut());
+    }
+    
+    public void waitForAlert(int timeOutInSeconds) {
+    	WebDriverWait wait = new WebDriverWait(getDriver(), timeOutInSeconds);
+    	wait.until(ExpectedConditions.alertIsPresent());
+    }
+    
+    public void waitForAlert() {
+    	waitForAlert(DriverUtils.getTimeOut());
+    }
 }
