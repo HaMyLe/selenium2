@@ -153,6 +153,10 @@ public class BaseControl {
                     e.getMessage().split("\n")[0]));
         }
     }
+    public void waitForAlert(int timeOutInSeconds) {
+    	WebDriverWait wait = new WebDriverWait(getDriver(), timeOutInSeconds);
+    	wait.until(ExpectedConditions.alertIsPresent());
+    }
     
     public void waitForVisibility(int timeOutInSeconds) {
         try {
@@ -169,12 +173,5 @@ public class BaseControl {
         waitForVisibility(DriverUtils.getTimeOut());
     }
     
-    public void waitForAlert(int timeOutInSeconds) {
-    	WebDriverWait wait = new WebDriverWait(getDriver(), timeOutInSeconds);
-    	wait.until(ExpectedConditions.alertIsPresent());
-    }
     
-    public void waitForAlert() {
-    	waitForAlert(DriverUtils.getTimeOut());
-    }
 }
