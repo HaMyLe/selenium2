@@ -6,7 +6,7 @@ public class GeneralPage {
 
 	private Link lnkDynamicMenu = new Link("//a[text()='%s']");
 
-	public void selectMainMenu(String pathMenu) {
+	public void selectMenuPath(String pathMenu) {
 		String[] menuIterms = pathMenu.split(">");
 
 		for (int i = 0; i < menuIterms.length; i++) {
