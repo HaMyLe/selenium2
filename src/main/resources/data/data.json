@@ -1,0 +1,12 @@
+{
+    "DA_LOGIN_TC002":[{
+      "message":"Username or password is invalid",
+      "password":"abc",
+      "username":"abc"
+    }],
+    "DA_LOGIN_TC003":[{
+      "result":"Username or password is invalid",
+      "password":"administrator",
+      "username":"abc"
+    }]
+}
