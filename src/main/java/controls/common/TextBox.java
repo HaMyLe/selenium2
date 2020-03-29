@@ -39,7 +39,12 @@ public class TextBox extends BaseControl {
 			getElement().sendKeys(value);
 		} catch (Exception e) {
 			logger.error(String.format("Has error with control '%s': %s", getLocator().toString(), e.getMessage().split("\n")[0]));
-			throw e;
+			try {
+				throw e;
+			} catch (Exception e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
 		}
 	}
     
@@ -49,7 +54,12 @@ public class TextBox extends BaseControl {
 			getElement().clear();
 		} catch (Exception e) {
 			logger.error(String.format("Has error with control '%s': %s", getLocator().toString(), e.getMessage().split("\n")[0]));
-			throw e;
+			try {
+				throw e;
+			} catch (Exception e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
 		}
 	}
 

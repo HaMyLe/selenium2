@@ -34,11 +34,6 @@ public class JsonHelper {
 			dataObject = (JSONObject) jsonObject;
 			System.out.println(dataObject);
 
-			// Check for the test name in the json file
-			boolean blnTCExist = (boolean) dataObject.get(testName);
-			if (!blnTCExist) {
-				return dataObject;
-			}
 		} catch (Exception ex) {
 			ex.printStackTrace();
 		}

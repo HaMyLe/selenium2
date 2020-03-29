@@ -2,11 +2,13 @@
     "DA_LOGIN_TC002":[{
       "message":"Username or password is invalid",
       "password":"abc",
-      "username":"abc"
+      "username":"abc",
+      "sample_repository": "SampleRepository"
     }],
     "DA_LOGIN_TC003":[{
-      "result":"Username or password is invalid",
-      "password":"administrator",
-      "username":"abc"
+      "message":"Username or password is invalid",
+      "password":"abc",
+      "username":"administrator",
+      "sample_repository": "SampleRepository"
     }]
 }

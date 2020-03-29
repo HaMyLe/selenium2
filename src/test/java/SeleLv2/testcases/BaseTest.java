@@ -1,14 +1,9 @@
 package SeleLv2.testcases;
 
 import org.openqa.selenium.WebDriver;
-import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
-
-import com.google.common.base.Throwables;
-
 import java.lang.reflect.Method;
 
 import driver.DriverType;
@@ -17,12 +12,8 @@ import driver.manager.DriverManager;
 import driver.manager.DriverManagerFactory;
 import utils.Constants;
 import utils.helpers.*;
-
 import java.io.IOException;
-
 import org.apache.log4j.xml.DOMConfigurator;
-import org.json.simple.JSONObject;
-
 
 public class BaseTest {
 	DriverManager driverManager;

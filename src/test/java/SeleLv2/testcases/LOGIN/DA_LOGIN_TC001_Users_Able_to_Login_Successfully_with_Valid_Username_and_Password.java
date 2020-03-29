@@ -1,4 +1,4 @@
-package SeleLv2.testcases.login;
+package SeleLv2.testcases.LOGIN;
 
 import org.apache.log4j.Logger;
 import org.testng.Assert;
@@ -16,7 +16,7 @@ public class DA_LOGIN_TC001_Users_Able_to_Login_Successfully_with_Valid_Username
 	HomePage homePage = new HomePage();
 	
 	@Test
-	public void DA_LOGIN_TC001() {
+	public void DA_LOGIN_TC001() throws Exception {
 		loginPage.loginDA(Constants.USERNAME, Constants.PASSWORD);
 		  Assert.assertEquals(homePage.getUserName(),Constants.USERNAME);
 	}
