@@ -114,7 +114,7 @@ public class BaseControl {
         return this.byLocator;
     }
     
-    public String getText() {
+    public String getText() throws Exception {
         try {
             logger.debug(String.format("Get text of element %s", getLocator().toString()));
             return getElement().getText();
@@ -173,5 +173,13 @@ public class BaseControl {
         waitForVisibility(DriverUtils.getTimeOut());
     }
     
+    public boolean isExist() {
+        try {
+            WebDriverWait wait = new WebDriverWait(getDriver(), DriverUtils.getTimeOut());
+            return (wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(getLocator())) != null);
+        } catch (Exception e) {
+            return false;
+        }
+    } 
     
 }

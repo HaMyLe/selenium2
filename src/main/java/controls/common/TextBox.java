@@ -39,7 +39,6 @@ public class TextBox extends BaseControl {
 			getElement().sendKeys(value);
 		} catch (Exception e) {
 			logger.error(String.format("Has error with control '%s': %s", getLocator().toString(), e.getMessage().split("\n")[0]));
-			throw e;
 		}
 	}
     
@@ -49,7 +48,6 @@ public class TextBox extends BaseControl {
 			getElement().clear();
 		} catch (Exception e) {
 			logger.error(String.format("Has error with control '%s': %s", getLocator().toString(), e.getMessage().split("\n")[0]));
-			throw e;
 		}
 	}
 
