@@ -182,4 +182,15 @@ public class BaseControl {
         }
     } 
     
+    public boolean isSelected() {
+        try {
+            logger.debug(String.format("is control selected or not: %s", getLocator().toString()));
+            return getElement().isSelected();
+        } catch (Exception e) {
+            logger.error(String.format("IsSelected: Has error with control '%s': %s", getLocator().toString(),
+                    e.getMessage().split("\n")[0]));
+            return false;
+        }
+    }
+    
 }

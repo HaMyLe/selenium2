@@ -15,7 +15,6 @@ public class GeneralPage {
 			lnkDynamicMenu.moveTo();
 		}
 		lnkDynamicMenu.click();
-
 	}
 
 }
