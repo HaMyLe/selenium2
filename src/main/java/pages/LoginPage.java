@@ -4,6 +4,7 @@ import controls.common.Button;
 import controls.common.ComboBox;
 import controls.common.TextBox;
 import driver.DriverUtils;
+import utils.Constants;
 
 public class LoginPage {
 	
@@ -35,7 +36,7 @@ public class LoginPage {
 	}
 	
 	public String getTextAlert() {
-		btnLogin.waitForAlert(3);
+		btnLogin.waitForAlert(Constants.VERY_SHORT_TIME);
 		return DriverUtils.getTextAlert();
 	}
 }

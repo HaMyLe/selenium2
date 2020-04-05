@@ -10,15 +10,20 @@ import pages.LoginPage;
 import utils.Constants;
 
 public class DA_LOGIN_TC001_Users_Able_to_Login_Successfully_with_Valid_Username_and_Password extends BaseTest {
-	
-	private static Logger log4j = Logger.getLogger(DA_LOGIN_TC001_Users_Able_to_Login_Successfully_with_Valid_Username_and_Password.class);
+
+	private static Logger log4j = Logger
+			.getLogger(DA_LOGIN_TC001_Users_Able_to_Login_Successfully_with_Valid_Username_and_Password.class);
 	LoginPage loginPage = new LoginPage();
 	HomePage homePage = new HomePage();
-	
+
 	@Test
 	public void DA_LOGIN_TC001() throws Exception {
+		
+		log4j.info("Step #1: Navigate to Dashboard login page and login with valid username and password");
 		loginPage.loginDA(Constants.USERNAME, Constants.PASSWORD);
-		  Assert.assertEquals(homePage.getUserName(),Constants.USERNAME);
+		
+		log4j.info("Step #2: Verify that Dashboard Mainpage appears");
+		Assert.assertEquals(homePage.getUserName(), Constants.USERNAME);
 	}
 
 }

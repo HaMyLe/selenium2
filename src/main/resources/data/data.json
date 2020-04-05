@@ -10,5 +10,19 @@
       "password":"abc",
       "username":"administrator",
       "sample_repository": "SampleRepository"
+    }],
+    "DA_MP_TC013":[{
+    	"page_name_1":"Page1",
+    	"page_name_2":"Page2",
+    	"display_after":"Page1"
+    }],
+    "DA_MP_TC015":[{
+    	"page_name_1":"Test",
+    	"page_name_2":"Test_Child",
+    	"parent_dropdown":"Test"
+    }],
+    "DA_MP_TC016":[{
+    	"page_name_1":"Test",
+    	"page_name_2":"Another_Test"
     }]
 }

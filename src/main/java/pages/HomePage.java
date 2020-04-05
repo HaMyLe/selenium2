@@ -6,15 +6,14 @@ import controls.common.ComboBox;
 import controls.common.Dialog;
 import controls.common.Link;
 import controls.common.TextBox;
+import driver.DriverUtils;
 
 public class HomePage extends GeneralPage {
 
-//	 private Link lnkDynameUsername = new Link("//a[text()='%s']");
 	private Link lnkUser = new Link("//a[@href='#Welcome']");
 	private Link lnkLogout = new Link("//a[text()='Logout']");
 	private Link lnkTitle = new Link("//title[contains(.,'TestArchitect')]");
 	private Link lnkRepo = new Link("//a[contains(.,'Repository')]/span");
-	// a[.='Repository: SampleRepository']
 	private Link lnkRepoName = new Link("//a[.='%s']");
 	private Link lnkGlobalIcon = new Link("//div[@id='main-menu']//li[@class='mn-setting']");
 	private Link lnkDynamicIttemSetting = new Link("//li[@class='mn-setting']//a[text()='%s']");
@@ -26,7 +25,8 @@ public class HomePage extends GeneralPage {
 	private CheckBox ckbPublic = new CheckBox("id=ispublic");
 	private Button btnOkButton = new Button("id=OK");
 	private Button btnCancelButton = new Button("id=Cancel");
-	private Link lnkDynamicNewPage = new Link("//div[@id='main-menu']//li[@class='active']/a[text()='%s']");
+	private Link lnkDynamicNewPage = new Link("//div[@id='main-menu']//a[text()='%s']");
+	private Link lnkDynamicPositionBeside = new Link("//li[@class='active']/preceding-sibling::li/a[text()='%s']");
 
 	public String getUserName() throws Exception {
 		lnkUser.waitForDisplay();
@@ -80,12 +80,13 @@ public class HomePage extends GeneralPage {
 	public boolean isDialogPageDisplayed(String page) {
 		dlgDynamicPage.setDynamicValue(page);
 		dlgDynamicPage.waitForVisibility();
-		return dlgDynamicPage.isExist();
+		return dlgDynamicPage.isVisible();
 	}
 
 	public void fillDataToAddPage(String pageName, String parentPage, String numberOfColumn, String displayAfter,
 			Boolean ispublic) {
 		txtPageName.waitForVisibility();
+		txtPageName.clear();
 		txtPageName.enter(pageName);
 		if (parentPage != null) {
 			cbxParentPage.waitForVisibility();
@@ -99,16 +100,25 @@ public class HomePage extends GeneralPage {
 			cbxDisplayAfter.waitForVisibility();
 			cbxDisplayAfter.select(displayAfter);
 		}
-		if (ispublic == true) {
-			ckbPublic.waitForVisibility();
-			ckbPublic.check();
-		}
+		ckbPublic.waitForVisibility();
+		ckbPublic.setState(ispublic);
+
 	}
 
 	public void addNewPage(String pageName, String parentPage, String numberOfColumn, String displayAfter,
 			Boolean ispublic) {
+		waitForPageLoad();
 		fillDataToAddPage(pageName, parentPage, numberOfColumn, displayAfter, ispublic);
 		clickButtonOkDialog();
+		btnOkButton.waitForInVisibility();
+	}
+
+	public void editNewPage(String pageName, String parentPage, String numberOfColumn, String displayAfter,
+			Boolean ispublic) {
+		waitForPageLoad();
+		fillDataToAddPage(pageName, parentPage, numberOfColumn, displayAfter, ispublic);
+		clickButtonOkDialog();
+		btnOkButton.waitForInVisibility();
 	}
 
 	public void clickButtonOkDialog() {
@@ -124,13 +134,44 @@ public class HomePage extends GeneralPage {
 	public boolean isPageCreated(String page) {
 		lnkDynamicNewPage.setDynamicValue(page);
 		lnkDynamicNewPage.waitForVisibility();
+		return lnkDynamicNewPage.isVisible();
+	}
+
+	public boolean isChildPageCreadted(String page) {
+		lnkDynamicNewPage.setDynamicValue(page);
+		lnkDynamicNewPage.waitForVisibility();
 		return lnkDynamicNewPage.isExist();
 	}
-	
-	public void deleteNewlyAddedPage(String page, String item) {
+
+	public void deleteAddedPage(String page, String item) {
+		waitForPageLoad();
+		lnkDynamicNewPage.setDynamicValue(page);
+		lnkDynamicNewPage.waitForVisibility();
+		lnkDynamicNewPage.click();
+		selectItemsSetting(item);
+		DriverUtils.acceptAltert();
+		lnkDynamicNewPage.waitForInVisibility();
+	}
+
+	public void deleteChildMenu(String pathMenu, String item) {
+		waitForPageLoad();
+		selectMenuPath(pathMenu);
+		selectItemsSetting(item);
+		DriverUtils.acceptAltert();
+	}
+
+	public boolean isPositionBesidePage(String page) {
+		lnkDynamicPositionBeside.setDynamicValue(page);
+		lnkDynamicPositionBeside.waitForVisibility();
+		return lnkDynamicPositionBeside.isVisible();
+	}
+
+	public void gotToEditPage(String page, String item) {
+		waitForPageLoad();
 		lnkDynamicNewPage.setDynamicValue(page);
 		lnkDynamicNewPage.waitForVisibility();
 		lnkDynamicNewPage.click();
 		selectItemsSetting(item);
 	}
+
 }

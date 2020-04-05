@@ -29,6 +29,15 @@ public class CheckBox extends BaseControl{
         super(parent, locator, value);
     }
     
+    public void setState(Boolean state) {
+        if (this.getState() != state)
+            click();
+    }
+
+    public boolean getState() {
+        return this.isSelected();
+    }
+    
     public void check() {
         if (!isChecked()) {
             click();

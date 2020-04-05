@@ -6,6 +6,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import driver.manager.DriverManagerFactory;
+import utils.Constants;
 
 public class DriverUtils extends DriverManagerFactory {
 	
@@ -31,11 +32,16 @@ public class DriverUtils extends DriverManagerFactory {
 	}
 	
 	public static String getTextAlert() {
-		waitForAlert(3);
+		waitForAlert(Constants.VERY_SHORT_TIME);
 		return switchToAlert().getText();
 	}
 	
 	public static String getTitle() {
 		return getDriver().getTitle();
+	}
+	
+	public static void acceptAltert() {
+		waitForAlert(Constants.VERY_SHORT_TIME);
+		switchToAlert().accept();
 	}
 }
