@@ -182,4 +182,39 @@ public class BaseControl {
         }
     } 
     
+    public boolean isSelected() {
+        try {
+            logger.debug(String.format("is control selected or not: %s", getLocator().toString()));
+            return getElement().isSelected();
+        } catch (Exception e) {
+            logger.error(String.format("IsSelected: Has error with control '%s': %s", getLocator().toString(),
+                    e.getMessage().split("\n")[0]));
+            return false;
+        }
+    }
+    
+    public void waitForInVisibility() {
+    	waitForInVisibility(DriverUtils.getTimeOut());
+    }
+    
+    public void waitForInVisibility(int timeOutInSeconds) {
+        try {
+            logger.info(String.format("Wait for control's invisibility %s", getLocator().toString()));
+            WebDriverWait wait = new WebDriverWait(getDriver(), timeOutInSeconds);
+            wait.until(ExpectedConditions.invisibilityOfElementLocated(getLocator()));
+        } catch (Exception e) {
+            logger.error(String.format("waitForInVisibility: Has error with control '%s': %s", getLocator().toString(),
+                    e.getMessage().split("\n")[0]));
+        }
+    }
+    
+    public boolean isVisible() {
+        try {
+            WebDriverWait wait = new WebDriverWait(getDriver(), DriverUtils.getTimeOut());
+            return (wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(getLocator())) != null);
+        } catch (Exception e) {
+            return false;
+        }
+    }
+    
 }
