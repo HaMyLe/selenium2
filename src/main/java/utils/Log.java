@@ -1,10 +1,9 @@
 package utils;
 
 import org.apache.log4j.Logger;
-import org.apache.log4j.xml.DOMConfigurator;
 
 public class Log {
-    static Logger logger = Logger.getLogger(Log.class);
+    static Logger logger = Logger.getLogger(Log.class.getName());
     
     public static void info(String message) {
         logger.info(message);
@@ -18,7 +17,7 @@ public class Log {
         logger.error(message);
     }
 
-    public static void fatal(String message) {
+    public static void fail(String message) {
         logger.fatal(message);
     }
 

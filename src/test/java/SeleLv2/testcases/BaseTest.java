@@ -1,5 +1,6 @@
 package SeleLv2.testcases;
 
+import org.apache.log4j.xml.DOMConfigurator;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
@@ -13,16 +14,15 @@ import driver.manager.DriverManagerFactory;
 import utils.Constants;
 import utils.helpers.*;
 import java.io.IOException;
-import org.apache.log4j.xml.DOMConfigurator;
 
 public class BaseTest {
+
 	DriverManager driverManager;
 	WebDriver driver;
-
-	// Initiate log4j property system
 	
 	@BeforeClass
 	public void setUp() {
+//		DOMConfigurator.configure("resources/log4j2.xml");
 		driverManager = DriverManagerFactory.getDriverManager(DriverType.CHROME);
 		driver = driverManager.getWebDriver();
 		openBrowser();
