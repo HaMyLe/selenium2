@@ -11,6 +11,30 @@
       "username":"administrator",
       "sample_repository": "SampleRepository"
     }],
+    "DA_LOGIN_TC006":[{
+		"username":"TEST",
+		"uppercase_password":"TEST",
+		"lowsercase_password": "test",
+		"error_message":"Username or password is invalid"
+    }],
+    "DA_LOGIN_TC007":[{
+    	"uppercase_username":"TAADMIN",
+    	"lowsercase_username":"taadmin",
+    	"password":"taadmin"
+    }],
+    "DA_LOGIN_TC008":[{
+    	"username":"tc008",
+    	"password":"p@ssw0rd"
+    }],
+    "DA_LOGIN_TC009":[{
+    	"username":"tc009!",
+    	"password":"taadmin"
+    }],
+    "DA_LOGIN_TC010":[{
+    	"username":"",
+    	"password":"",
+    	"error_message":"Please enter username!"
+    }],
     "DA_MP_TC013":[{
     	"page_name_1":"Page1",
     	"page_name_2":"Page2",
