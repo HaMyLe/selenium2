@@ -2,11 +2,8 @@ package SeleLv2.testcases.LOGIN;
 
 import java.io.IOException;
 import java.util.Hashtable;
-
-import org.apache.log4j.Logger;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
 import SeleLv2.testcases.BaseTest;
 import driver.DriverUtils;
 import pages.HomePage;
