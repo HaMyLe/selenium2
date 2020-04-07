@@ -1,0 +1,197 @@
+{
+  "4b1b3fe1f4431b98f228939e15fbc6dd" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "21e211e6e39b3e26",
+      "status" : "passed",
+      "time" : {
+        "start" : 1585052413347,
+        "stop" : 1585052427118,
+        "duration" : 13771
+      }
+    } ]
+  },
+  "e3af0a809eb9a82ab370efe9f5580b78" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 1,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "85f7ca38aa6a7b5b",
+      "status" : "broken",
+      "statusDetails" : "Session ID is null. Using WebDriver after calling quit()?\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'DESKTOP-84VFAEK', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_231'\nDriver info: driver.version: RemoteWebDriver",
+      "time" : {
+        "start" : 1585052441467,
+        "stop" : 1585052441471,
+        "duration" : 4
+      }
+    } ]
+  },
+  "4456772e821b4e6e7fe91c955b2dca0b" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 1,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "29291631ab90d0b9",
+      "status" : "broken",
+      "statusDetails" : "Session ID is null. Using WebDriver after calling quit()?\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'DESKTOP-84VFAEK', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_231'\nDriver info: driver.version: RemoteWebDriver",
+      "time" : {
+        "start" : 1585052428209,
+        "stop" : 1585052428215,
+        "duration" : 6
+      }
+    } ]
+  },
+  "e2ce5f2e088ba06edc03bb76151534c2" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "5cc07f82d9e57bbd",
+      "status" : "passed",
+      "time" : {
+        "start" : 1585051229588,
+        "stop" : 1585051245835,
+        "duration" : 16247
+      }
+    } ]
+  },
+  "61097693a77aea203a06a2fa321fda57" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "ee388188b789c522",
+      "status" : "passed",
+      "time" : {
+        "start" : 1585052742609,
+        "stop" : 1585052744196,
+        "duration" : 1587
+      }
+    } ]
+  },
+  "b2951177014cec5c242647dd7255d337" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "d290ecd45bc4e195",
+      "status" : "passed",
+      "time" : {
+        "start" : 1585052378733,
+        "stop" : 1585052399945,
+        "duration" : 21212
+      }
+    } ]
+  },
+  "49eb11233493a4f1b8d6373259c39e23" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 1,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "76869e29903b573d",
+      "status" : "broken",
+      "statusDetails" : "Session ID is null. Using WebDriver after calling quit()?\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'DESKTOP-84VFAEK', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_231'\nDriver info: driver.version: RemoteWebDriver",
+      "time" : {
+        "start" : 1585052428182,
+        "stop" : 1585052428194,
+        "duration" : 12
+      }
+    } ]
+  },
+  "bf25d0e02e97d26fa52506748d605db" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 1,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "79bf6da619fa2b56",
+      "status" : "broken",
+      "statusDetails" : "java.lang.NullPointerException",
+      "time" : {
+        "start" : 1585052331432,
+        "stop" : 1585052331503,
+        "duration" : 71
+      }
+    } ]
+  },
+  "709235e9a1123088cb0100301d100fcd" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 1,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "3e56149cf869d08b",
+      "status" : "broken",
+      "statusDetails" : "Session ID is null. Using WebDriver after calling quit()?\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'DESKTOP-84VFAEK', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_231'\nDriver info: driver.version: RemoteWebDriver",
+      "time" : {
+        "start" : 1585052428280,
+        "stop" : 1585052428304,
+        "duration" : 24
+      }
+    } ]
+  },
+  "4b30a6b0ca360e13d62dc1da8712dbdf" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "1574ba537b685742",
+      "status" : "passed",
+      "time" : {
+        "start" : 1585052365999,
+        "stop" : 1585052367994,
+        "duration" : 1995
+      }
+    } ]
+  }
+}

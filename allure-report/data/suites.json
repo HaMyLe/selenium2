@@ -1,0 +1,191 @@
+{
+  "uid" : "98d3104e051c652961429bf95fa0b5d6",
+  "name" : "suites",
+  "children" : [ {
+    "name" : "Command line suite",
+    "children" : [ {
+      "name" : "Command line test",
+      "children" : [ {
+        "name" : "SeleLv2.testcases.LoginTest",
+        "children" : [ {
+          "name" : "DA_LOGIN_TC001",
+          "uid" : "5cc07f82d9e57bbd",
+          "parentUid" : "480fc6b889b9b19fbf343817c201e6a6",
+          "status" : "passed",
+          "time" : {
+            "start" : 1585051229588,
+            "stop" : 1585051245835,
+            "duration" : 16247
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ ]
+        } ],
+        "uid" : "480fc6b889b9b19fbf343817c201e6a6"
+      } ],
+      "uid" : "d25b44baf1a59b2ba9e824375ad84458"
+    } ],
+    "uid" : "a3ebd3885f734b5e692af432fe3ee17b"
+  }, {
+    "name" : "Default suite",
+    "children" : [ {
+      "name" : "Default test",
+      "children" : [ {
+        "name" : "SeleLv2.testcases.DA_LOGIN_TC010_Login_without_username_and_password",
+        "children" : [ {
+          "name" : "DA_LOGIN_TC010",
+          "uid" : "79bf6da619fa2b56",
+          "parentUid" : "64d14dcd85194fe78ae028c8eebe14ae",
+          "status" : "broken",
+          "time" : {
+            "start" : 1585052331432,
+            "stop" : 1585052331503,
+            "duration" : 71
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ ]
+        } ],
+        "uid" : "64d14dcd85194fe78ae028c8eebe14ae"
+      }, {
+        "name" : "SeleLv2.testcases.DA_LOGIN_TC003_Login_with_incorrect_password",
+        "children" : [ {
+          "name" : "DA_LOGIN_TC003",
+          "uid" : "1574ba537b685742",
+          "parentUid" : "45e94bb8fa1d50f66a13c511cf8d51ee",
+          "status" : "passed",
+          "time" : {
+            "start" : 1585052365999,
+            "stop" : 1585052367994,
+            "duration" : 1995
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ ]
+        } ],
+        "uid" : "45e94bb8fa1d50f66a13c511cf8d51ee"
+      }, {
+        "name" : "SeleLv2.testcases.DA_LOGIN_TC004_Login_with_diff_repo",
+        "children" : [ {
+          "name" : "DA_LOGIN_TC004",
+          "uid" : "d290ecd45bc4e195",
+          "parentUid" : "c5e35d39126ce6f2a962a626aa81ab4a",
+          "status" : "passed",
+          "time" : {
+            "start" : 1585052378733,
+            "stop" : 1585052399945,
+            "duration" : 21212
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ ]
+        } ],
+        "uid" : "c5e35d39126ce6f2a962a626aa81ab4a"
+      }, {
+        "name" : "SeleLv2.testcases.DA_LOGIN_TC005_Missing_login_dialog_when_switching_repo",
+        "children" : [ {
+          "name" : "DA_LOGIN_TC006",
+          "uid" : "21e211e6e39b3e26",
+          "parentUid" : "0b9f3e0477e4bd261c617b32ba7002cd",
+          "status" : "passed",
+          "time" : {
+            "start" : 1585052413347,
+            "stop" : 1585052427118,
+            "duration" : 13771
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ ]
+        } ],
+        "uid" : "0b9f3e0477e4bd261c617b32ba7002cd"
+      }, {
+        "name" : "SeleLv2.testcases.DA_LOGIN_TC008_Login_with_special_characters_password",
+        "children" : [ {
+          "name" : "DA_LOGIN_TC008",
+          "uid" : "76869e29903b573d",
+          "parentUid" : "0a5fb6767fbb602fb85a6e7387c61fff",
+          "status" : "broken",
+          "time" : {
+            "start" : 1585052428182,
+            "stop" : 1585052428194,
+            "duration" : 12
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ ]
+        } ],
+        "uid" : "0a5fb6767fbb602fb85a6e7387c61fff"
+      }, {
+        "name" : "SeleLv2.testcases.DA_LOGIN_TC007_Login_without_sensitive_username",
+        "children" : [ {
+          "name" : "DA_LOGIN_TC007",
+          "uid" : "29291631ab90d0b9",
+          "parentUid" : "56c79aed730c819498871da5a0a2b866",
+          "status" : "broken",
+          "time" : {
+            "start" : 1585052428209,
+            "stop" : 1585052428215,
+            "duration" : 6
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ ]
+        } ],
+        "uid" : "56c79aed730c819498871da5a0a2b866"
+      }, {
+        "name" : "SeleLv2.testcases.DA_LOGIN_TC009_Login_with_special_characters_username",
+        "children" : [ {
+          "name" : "DA_LOGIN_TC009",
+          "uid" : "3e56149cf869d08b",
+          "parentUid" : "a98ee8c26b9134c2f3d17a9935f17c84",
+          "status" : "broken",
+          "time" : {
+            "start" : 1585052428280,
+            "stop" : 1585052428304,
+            "duration" : 24
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ ]
+        } ],
+        "uid" : "a98ee8c26b9134c2f3d17a9935f17c84"
+      }, {
+        "name" : "SeleLv2.testcases.DA_LOGIN_TC006_Login_with_sensitive_password",
+        "children" : [ {
+          "name" : "DA_LOGIN_TC006",
+          "uid" : "85f7ca38aa6a7b5b",
+          "parentUid" : "ea78aad0f38fbfc933cd4be06b0dc1fc",
+          "status" : "broken",
+          "time" : {
+            "start" : 1585052441467,
+            "stop" : 1585052441471,
+            "duration" : 4
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ ]
+        } ],
+        "uid" : "ea78aad0f38fbfc933cd4be06b0dc1fc"
+      }, {
+        "name" : "SeleLv2.testcases.DA_LOGIN_TC002_Login_with_invalid_credentials",
+        "children" : [ {
+          "name" : "DA_LOGIN_TC002",
+          "uid" : "ee388188b789c522",
+          "parentUid" : "47cfbc39b34fb81faab9d22128cf5b47",
+          "status" : "passed",
+          "time" : {
+            "start" : 1585052742609,
+            "stop" : 1585052744196,
+            "duration" : 1587
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ ]
+        } ],
+        "uid" : "47cfbc39b34fb81faab9d22128cf5b47"
+      } ],
+      "uid" : "848117670d75f6868e681771989ad50e"
+    } ],
+    "uid" : "2c8837b97293ea01a164a5cd7048ad56"
+  } ]
+}

@@ -27,8 +27,9 @@ public class HomePage extends GeneralPage {
 	private Button btnCancelButton = new Button("id=Cancel");
 	private Link lnkDynamicNewPage = new Link("//div[@id='main-menu']//a[text()='%s']");
 	private Link lnkDynamicPositionBeside = new Link("//li[@class='active']/preceding-sibling::li/a[text()='%s']");
+	private ComboBox cbbRepo = new ComboBox("id=ulListRepositories");
 
-	public String getUserName() throws Exception {
+	public String getUserName() {
 		lnkUser.waitForDisplay();
 		return lnkUser.getText();
 	}
@@ -40,12 +41,12 @@ public class HomePage extends GeneralPage {
 		lnkLogout.click();
 	}
 
-	public String getTitle() throws Exception {
+	public String getTitle() {
 		lnkTitle.waitForVisibility();
 		return lnkTitle.getText();
 	}
 
-	public void selectRepo(String repo) throws InterruptedException {
+	public void selectRepo(String repo) {
 		lnkRepo.waitForVisibility();
 		lnkRepo.click();
 		lnkRepoName.setDynamicValue(repo);
@@ -54,15 +55,9 @@ public class HomePage extends GeneralPage {
 	}
 
 	public String getTextRepo() {
-		try {
-			Thread.sleep(1000);
-			lnkRepo.waitForVisibility();
-			return lnkRepo.getText();
-
-		} catch (Exception e) {
-
-		}
-		return "";
+		lnkRepo.waitTextRepoChange();
+//		lnkRepo.waitForVisibility();
+		return lnkRepo.getText();
 	}
 
 	public void clickIconSetting() {
@@ -173,5 +168,4 @@ public class HomePage extends GeneralPage {
 		lnkDynamicNewPage.click();
 		selectItemsSetting(item);
 	}
-
 }

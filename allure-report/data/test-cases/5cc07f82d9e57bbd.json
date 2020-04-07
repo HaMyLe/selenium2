@@ -1,0 +1,88 @@
+{
+  "uid" : "5cc07f82d9e57bbd",
+  "name" : "DA_LOGIN_TC001",
+  "fullName" : "SeleLv2.testcases.LoginTest.DA_LOGIN_TC001",
+  "historyId" : "e2ce5f2e088ba06edc03bb76151534c2",
+  "time" : {
+    "start" : 1585051229588,
+    "stop" : 1585051245835,
+    "duration" : 16247
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "setUp",
+    "time" : {
+      "start" : 1585051208866,
+      "stop" : 1585051229025,
+      "duration" : 20159
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "afterStages" : [ {
+    "name" : "tearDown",
+    "time" : {
+      "start" : 1585051245903,
+      "stop" : 1585051247493,
+      "duration" : 1590
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : "SeleLv2.testcases.LoginTest"
+  }, {
+    "name" : "testClass",
+    "value" : "SeleLv2.testcases.LoginTest"
+  }, {
+    "name" : "testMethod",
+    "value" : "DA_LOGIN_TC001"
+  }, {
+    "name" : "parentSuite",
+    "value" : "Command line suite"
+  }, {
+    "name" : "suite",
+    "value" : "Command line test"
+  }, {
+    "name" : "subSuite",
+    "value" : "SeleLv2.testcases.LoginTest"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-84VFAEK"
+  }, {
+    "name" : "thread",
+    "value" : "1136@DESKTOP-84VFAEK.main(1)"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "5cc07f82d9e57bbd.json",
+  "parameterValues" : [ ]
+}

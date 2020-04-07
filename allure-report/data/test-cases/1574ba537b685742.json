@@ -1,0 +1,88 @@
+{
+  "uid" : "1574ba537b685742",
+  "name" : "DA_LOGIN_TC003",
+  "fullName" : "SeleLv2.testcases.DA_LOGIN_TC003_Login_with_incorrect_password.DA_LOGIN_TC003",
+  "historyId" : "4b30a6b0ca360e13d62dc1da8712dbdf",
+  "time" : {
+    "start" : 1585052365999,
+    "stop" : 1585052367994,
+    "duration" : 1995
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "setUp",
+    "time" : {
+      "start" : 1585052331817,
+      "stop" : 1585052365957,
+      "duration" : 34140
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "afterStages" : [ {
+    "name" : "tearDown",
+    "time" : {
+      "start" : 1585052367999,
+      "stop" : 1585052368976,
+      "duration" : 977
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : "SeleLv2.testcases.DA_LOGIN_TC003_Login_with_incorrect_password"
+  }, {
+    "name" : "testClass",
+    "value" : "SeleLv2.testcases.DA_LOGIN_TC003_Login_with_incorrect_password"
+  }, {
+    "name" : "testMethod",
+    "value" : "DA_LOGIN_TC003"
+  }, {
+    "name" : "parentSuite",
+    "value" : "Default suite"
+  }, {
+    "name" : "suite",
+    "value" : "Default test"
+  }, {
+    "name" : "subSuite",
+    "value" : "SeleLv2.testcases.DA_LOGIN_TC003_Login_with_incorrect_password"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-84VFAEK"
+  }, {
+    "name" : "thread",
+    "value" : "5068@DESKTOP-84VFAEK.main(1)"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "1574ba537b685742.json",
+  "parameterValues" : [ ]
+}

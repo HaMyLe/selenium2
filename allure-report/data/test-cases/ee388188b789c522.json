@@ -1,0 +1,104 @@
+{
+  "uid" : "ee388188b789c522",
+  "name" : "DA_LOGIN_TC002",
+  "fullName" : "SeleLv2.testcases.DA_LOGIN_TC002_Login_with_invalid_credentials.DA_LOGIN_TC002",
+  "historyId" : "61097693a77aea203a06a2fa321fda57",
+  "time" : {
+    "start" : 1585052742609,
+    "stop" : 1585052744196,
+    "duration" : 1587
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "setUp",
+    "time" : {
+      "start" : 1585052730969,
+      "stop" : 1585052742391,
+      "duration" : 11422
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "afterStages" : [ {
+    "name" : "tearDown",
+    "time" : {
+      "start" : 1585052744221,
+      "stop" : 1585052744943,
+      "duration" : 722
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : "SeleLv2.testcases.DA_LOGIN_TC002_Login_with_invalid_credentials"
+  }, {
+    "name" : "testClass",
+    "value" : "SeleLv2.testcases.DA_LOGIN_TC002_Login_with_invalid_credentials"
+  }, {
+    "name" : "testMethod",
+    "value" : "DA_LOGIN_TC002"
+  }, {
+    "name" : "parentSuite",
+    "value" : "Default suite"
+  }, {
+    "name" : "suite",
+    "value" : "Default test"
+  }, {
+    "name" : "subSuite",
+    "value" : "SeleLv2.testcases.DA_LOGIN_TC002_Login_with_invalid_credentials"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-84VFAEK"
+  }, {
+    "name" : "thread",
+    "value" : "15220@DESKTOP-84VFAEK.main(1)"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "954d84403e679a85",
+      "status" : "passed",
+      "time" : {
+        "start" : 1585052438188,
+        "stop" : 1585052440046,
+        "duration" : 1858
+      }
+    }, {
+      "uid" : "cea17c1b99f48868",
+      "status" : "passed",
+      "time" : {
+        "start" : 1585051650244,
+        "stop" : 1585051652331,
+        "duration" : 2087
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "ee388188b789c522.json",
+  "parameterValues" : [ ]
+}

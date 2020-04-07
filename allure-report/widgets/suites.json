@@ -1,0 +1,26 @@
+{
+  "total" : 2,
+  "items" : [ {
+    "uid" : "2c8837b97293ea01a164a5cd7048ad56",
+    "name" : "Default suite",
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 5,
+      "skipped" : 0,
+      "passed" : 4,
+      "unknown" : 0,
+      "total" : 9
+    }
+  }, {
+    "uid" : "a3ebd3885f734b5e692af432fe3ee17b",
+    "name" : "Command line suite",
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    }
+  } ]
+}
