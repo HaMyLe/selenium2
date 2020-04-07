@@ -14,7 +14,7 @@ public class DA_LOGIN_TC005_Missing_login_dialog_when_switching_repo extends Bas
 	HomePage homePage = new HomePage();
 
 	@Test
-	public void DA_LOGIN_TC006() throws InterruptedException {
+	public void DA_LOGIN_TC005() throws InterruptedException {
 		log.info("Verify that there is no Login dialog when switching between 2 repositories with the same account");
 
 		loginPage.loginDA(Constants.USERNAME, "", Constants.SAMPLE_REPO_NAME);
