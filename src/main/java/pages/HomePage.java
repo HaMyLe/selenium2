@@ -30,31 +30,35 @@ public class HomePage extends GeneralPage {
 	private ComboBox cbbRepo = new ComboBox("id=ulListRepositories");
 
 	public String getUserName() {
-		 lnkUser.waitForDisplay();
-		 return lnkUser.getText();
-	 }
+		lnkUser.waitForDisplay();
+		return lnkUser.getText();
+	}
 
 	public void logoutAccount() {
-		 lnkUser.waitForDisplay();
-		 lnkUser.click();
-		 lnkLogout.waitForDisplay();
-		 lnkLogout.click();
-	 }
-	 
-	 public String getTitle() {
-		 lnkTitle.waitForVisibility();
-		 return lnkTitle.getText();
-	 }
-	 
-	 public void selectRepo(String repo) {
-		 cbbRepo.select(repo);
-		 cbbRepo.waitForDisplay();
-	 }
+		lnkUser.waitForDisplay();
+		lnkUser.click();
+		lnkLogout.waitForDisplay();
+		lnkLogout.click();
+	}
+
+	public String getTitle() {
+		lnkTitle.waitForVisibility();
+		return lnkTitle.getText();
+	}
+
+	public void selectRepo(String repo) {
+		lnkRepo.waitForVisibility();
+		lnkRepo.click();
+		lnkRepoName.setDynamicValue(repo);
+		lnkRepoName.waitForVisibility();
+		lnkRepoName.click();
+	}
 
 	public String getTextRepo() {
-		 cbbRepo.waitForDisplay();
-		 return cbbRepo.getText();
-	 }
+		lnkRepo.waitTextRepoChange();
+//		lnkRepo.waitForVisibility();
+		return lnkRepo.getText();
+	}
 
 	public void clickIconSetting() {
 		lnkGlobalIcon.waitForVisibility();

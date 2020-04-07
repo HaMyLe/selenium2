@@ -216,4 +216,13 @@ public class BaseControl {
             return false;
         }
     }
+    
+    public String waitTextRepoChange() {
+		try {
+			Thread.sleep(1000);			
+		} catch (Exception e) {
+
+		}
+		return "";
+	}
 }
