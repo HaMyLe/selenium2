@@ -140,9 +140,7 @@ public class HomePage extends GeneralPage {
 
 	public void deleteAddedPage(String page, String item) {
 		waitForPageLoad();
-		lnkDynamicNewPage.setDynamicValue(page);
-		lnkDynamicNewPage.waitForVisibility();
-		lnkDynamicNewPage.click();
+		selectMenuPage(page);
 		selectItemsSetting(item);
 		DriverUtils.acceptAltert();
 		lnkDynamicNewPage.waitForInVisibility();
@@ -163,9 +161,13 @@ public class HomePage extends GeneralPage {
 
 	public void gotToEditPage(String page, String item) {
 		waitForPageLoad();
+		selectMenuPage(page);
+		selectItemsSetting(item);
+	}
+	
+	public void selectMenuPage(String page) {
 		lnkDynamicNewPage.setDynamicValue(page);
 		lnkDynamicNewPage.waitForVisibility();
 		lnkDynamicNewPage.click();
-		selectItemsSetting(item);
 	}
 }

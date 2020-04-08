@@ -38,4 +38,5 @@ public class GeneralPage {
     public void waitForPageLoad() {
     	waitForLoad(DriverUtils.getDriver());
     }
+    
 }
