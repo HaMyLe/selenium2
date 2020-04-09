@@ -1,5 +1,7 @@
 package pages;
 
+import org.openqa.selenium.ElementClickInterceptedException;
+
 import controls.common.Button;
 import controls.common.CheckBox;
 import controls.common.ComboBox;
@@ -7,6 +9,7 @@ import controls.common.Dialog;
 import controls.common.Link;
 import controls.common.TextBox;
 import driver.DriverUtils;
+import utils.Log;
 
 public class HomePage extends GeneralPage {
 
@@ -71,6 +74,14 @@ public class HomePage extends GeneralPage {
 		lnkDynamicIttemSetting.waitForVisibility();
 		lnkDynamicIttemSetting.click();
 	}
+	
+	public void selectAddPage() {
+		try {
+			selectItemsSetting("Add Page");
+		} catch (ElementClickInterceptedException e) {
+			Log.info("Element is not interacted");
+		}
+	}
 
 	public boolean isDialogPageDisplayed(String page) {
 		dlgDynamicPage.setDynamicValue(page);
@@ -108,10 +119,31 @@ public class HomePage extends GeneralPage {
 		btnOkButton.waitForInVisibility();
 	}
 
+	public void addNewPage(String pageName, Boolean isPulic) {
+		waitForPageLoad();
+		fillDataToAddPage(pageName, null, null, null, isPulic);
+		clickButtonOkDialog();
+		btnOkButton.waitForInVisibility();
+	}
+	
+	public void addNewPage(String pageName, String displayAfter, Boolean isPulic) {
+		waitForPageLoad();
+		fillDataToAddPage(pageName, null, null, displayAfter, isPulic);
+		clickButtonOkDialog();
+		btnOkButton.waitForInVisibility();
+	}
+
 	public void editNewPage(String pageName, String parentPage, String numberOfColumn, String displayAfter,
 			Boolean ispublic) {
 		waitForPageLoad();
 		fillDataToAddPage(pageName, parentPage, numberOfColumn, displayAfter, ispublic);
+		clickButtonOkDialog();
+		btnOkButton.waitForInVisibility();
+	}
+	
+	public void editNewPage(String pageName,Boolean ispublic) {
+		waitForPageLoad();
+		fillDataToAddPage(pageName, null, null, null, ispublic);
 		clickButtonOkDialog();
 		btnOkButton.waitForInVisibility();
 	}
@@ -151,6 +183,7 @@ public class HomePage extends GeneralPage {
 		selectMenuPath(pathMenu);
 		selectItemsSetting(item);
 		DriverUtils.acceptAltert();
+		lnkDynamicNewPage.waitForInVisibility();
 	}
 
 	public boolean isPositionBesidePage(String page) {
@@ -164,7 +197,7 @@ public class HomePage extends GeneralPage {
 		selectMenuPage(page);
 		selectItemsSetting(item);
 	}
-	
+
 	public void selectMenuPage(String page) {
 		lnkDynamicNewPage.setDynamicValue(page);
 		lnkDynamicNewPage.waitForVisibility();
