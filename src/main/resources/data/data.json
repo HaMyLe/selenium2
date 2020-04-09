@@ -68,6 +68,7 @@
     	"page_name_1":"Page_1",
     	"parent_page_1":"Overview",
     	"page_name_2":"Page_2",
-    	"parent_page_2":"Page_1"
+    	"parent_page_2":"Page_1",
+    	"warning_message":"Cannot delete page 'Page_1' since it has child page(s)."
     }]
 }
