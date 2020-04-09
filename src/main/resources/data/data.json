@@ -48,5 +48,27 @@
     "DA_MP_TC016":[{
     	"page_name_1":"Test",
     	"page_name_2":"Another_Test"
+    }],
+    "DA_MP_TC017":[{
+    	"page_name":"Test",
+    	"page_name_child":"Test_Child_1",
+    	"confirm_message":"Are you sure you want to remove this page?",
+    	"warning_message":"Cannot delete page 'Test' since it has child page(s)."
+    }],
+    "DA_MP_TC018":[{
+    	"page_name":"Test",
+    	"page_name_child_1":"Test_Child_1",
+    	"page_name_child_2":"Test_Child_2"
+    }],
+    "DA_MP_TC019":[{
+    	"page_name":"Test",
+    	"parent_page":"Overview"
+    }],
+    "DA_MP_TC020":[{
+    	"page_name_1":"Page_1",
+    	"parent_page_1":"Overview",
+    	"page_name_2":"Page_2",
+    	"parent_page_2":"Page_1",
+    	"warning_message":"Cannot delete page 'Page_1' since it has child page(s)."
     }]
 }
