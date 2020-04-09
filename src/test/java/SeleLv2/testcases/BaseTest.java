@@ -2,7 +2,7 @@ package SeleLv2.testcases;
 
 import org.apache.log4j.xml.DOMConfigurator;
 import org.openqa.selenium.WebDriver;
-import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
 import java.lang.reflect.Method;
@@ -28,7 +28,7 @@ public class BaseTest {
 		openBrowser();
 	}
 	
-	@AfterMethod
+	@AfterClass
 	public void tearDown() {
 		driver.quit();
 	}
