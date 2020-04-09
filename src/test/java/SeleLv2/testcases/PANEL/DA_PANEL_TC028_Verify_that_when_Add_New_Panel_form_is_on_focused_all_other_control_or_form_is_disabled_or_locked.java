@@ -1,0 +1,5 @@
+package SeleLv2.testcases.PANEL;
+
+public class DA_PANEL_TC028_Verify_that_when_Add_New_Panel_form_is_on_focused_all_other_control_or_form_is_disabled_or_locked {
+
+}

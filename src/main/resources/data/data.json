@@ -70,5 +70,22 @@
     	"page_name_2":"Page_2",
     	"parent_page_2":"Page_1",
     	"warning_message":"Cannot delete page 'Page_1' since it has child page(s)."
+    }],
+    "DA_MP_TC021":[{
+    	"username":"test",
+    	"password":"test",
+    	"page_name_1":"Page_1",
+    	"parent_page_name_1": "Overview",
+    	"page_name_2":"Page_2",
+    	"parent_page_name_2": "Page_1",
+    	"page_name_3":"Page_3",
+    	"page_name_4":"Page_4"
+    }],
+    "DA_MP_TC022":[{
+    	"username":"test",
+    	"password":"test",
+    	"page_name_1":"Test",
+    	"page_name_2":"Test_Child_1",
+    	"parent_page_name_2": "Test"
     }]
 }
