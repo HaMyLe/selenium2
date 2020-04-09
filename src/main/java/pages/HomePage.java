@@ -75,6 +75,11 @@ public class HomePage extends GeneralPage {
 		lnkDynamicIttemSetting.click();
 	}
 	
+	public boolean isItemUnderSettingDisplayed(String item) {
+		clickIconSetting();
+		return lnkDynamicIttemSetting.isVisible();
+	}
+	
 	public void selectAddPage() {
 		try {
 			selectItemsSetting("Add Page");
@@ -158,15 +163,14 @@ public class HomePage extends GeneralPage {
 		btnCancelButton.click();
 	}
 
-	public boolean isPageCreated(String page) {
+	public boolean isPageDisplayed(String page) {
 		lnkDynamicNewPage.setDynamicValue(page);
-		lnkDynamicNewPage.waitForVisibility();
 		return lnkDynamicNewPage.isVisible();
 	}
 
-	public boolean isChildPageCreadted(String page) {
+	public boolean isChildPageDisplayed(String page) {
+		waitForPageLoad();
 		lnkDynamicNewPage.setDynamicValue(page);
-		lnkDynamicNewPage.waitForVisibility();
 		return lnkDynamicNewPage.isExist();
 	}
 
@@ -203,4 +207,9 @@ public class HomePage extends GeneralPage {
 		lnkDynamicNewPage.waitForVisibility();
 		lnkDynamicNewPage.click();
 	}
+	
+	public String getAlterMessage() {
+		return DriverUtils.getTextAlert().trim();
+	}
+
 }

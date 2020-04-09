@@ -29,7 +29,7 @@ public class DA_MP_TC013_Newly_Added_Main_Parent_Page_Is_Positioned_At_The_Locat
 
 		Log.info("Step #3: Add new page");
 		homePage.addNewPage(data.get("page_name_1"), false);
-		Assert.assertTrue(homePage.isPageCreated(data.get("page_name_1")), String.format("%s isn't displayed",data.get("page_name_1")));
+		Assert.assertTrue(homePage.isPageDisplayed(data.get("page_name_1")), String.format("%s isn't displayed",data.get("page_name_1")));
 		
 		Log.info("Step #4: Go to Global Setting -> Add page");
 		homePage.selectItemsSetting(SettingsButton.ADD_PAGE.getName());

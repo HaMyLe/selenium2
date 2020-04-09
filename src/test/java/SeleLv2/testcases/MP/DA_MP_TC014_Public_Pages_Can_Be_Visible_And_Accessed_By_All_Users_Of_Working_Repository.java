@@ -36,7 +36,7 @@ public class DA_MP_TC014_Public_Pages_Can_Be_Visible_And_Accessed_By_All_Users_O
 		loginPage.loginDA(Constants.USERNAME, Constants.PASSWORD);
 
 		Log.info("Step #6:Check \"Test\" page is displayed besides \"Overview\" page");
-		Assert.assertTrue(homePage.isPageCreated(pageName), String.format("%s isn't displayed", pageName));
+		Assert.assertTrue(homePage.isPageDisplayed(pageName), String.format("%s isn't displayed", pageName));
 		
 		Log.info("Step #7: Click on Log out link");
 		homePage.logoutAccount();

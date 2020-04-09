@@ -29,7 +29,7 @@ public class DA_MP_TC015_Public_Pages_Can_Only_Be_Accessed_And_Visible_To_Their_
 
 		Log.info("Step #3: Add new page");
 		homePage.addNewPage(data.get("page_name_1"), true);
-		Assert.assertTrue(homePage.isPageCreated(data.get("page_name_1")), String.format("%s isn't displayed",data.get("page_name_1")));
+		Assert.assertTrue(homePage.isPageDisplayed(data.get("page_name_1")), String.format("%s isn't displayed",data.get("page_name_1")));
 		
 		Log.info("Step #4: Go to Global Setting -> Add page");
 		homePage.selectItemsSetting(SettingsButton.ADD_PAGE.getName());

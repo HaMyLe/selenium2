@@ -30,7 +30,7 @@ public class DA_MP_TC012_User_is_able_to_Add_Additional_Pages_Besides_Overview_P
 		homePage.addNewPage(pageName, false);
 
 		Log.info("Step #4: Check \"Test\" page is displayed besides \"Overview\" page");
-		Assert.assertTrue(homePage.isPageCreated(pageName), String.format("%s isn't displayed", pageName));
+		Assert.assertTrue(homePage.isPageDisplayed(pageName), String.format("%s isn't displayed", pageName));
 
 	}
 

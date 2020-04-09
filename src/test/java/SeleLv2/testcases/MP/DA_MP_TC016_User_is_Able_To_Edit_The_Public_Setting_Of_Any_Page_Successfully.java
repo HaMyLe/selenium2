@@ -30,14 +30,14 @@ public class DA_MP_TC016_User_is_Able_To_Edit_The_Public_Setting_Of_Any_Page_Suc
 
 		Log.info("Step #3: Add new page");
 		homePage.addNewPage(data.get("page_name_1"), false);
-		Assert.assertTrue(homePage.isPageCreated(data.get("page_name_1")), String.format("%s isn't displayed",data.get("page_name_1")));
+		Assert.assertTrue(homePage.isPageDisplayed(data.get("page_name_1")), String.format("%s isn't displayed",data.get("page_name_1")));
 		
 		Log.info("Step #4: Go to Global Setting -> Add page");
 		homePage.selectItemsSetting(SettingsButton.ADD_PAGE.getName());
 
 		Log.info("Step #5: Add new page");
 		homePage.addNewPage(data.get("page_name_2"), true);
-		Assert.assertTrue(homePage.isPageCreated(data.get("page_name_2")), String.format("%s isn't displayed",data.get("page_name_1")));
+		Assert.assertTrue(homePage.isPageDisplayed(data.get("page_name_2")), String.format("%s isn't displayed",data.get("page_name_1")));
 		
 		Log.info("Step #6: Go to Global Setting -> Edit page");
 		homePage.gotToEditPage(data.get("page_name_1"), SettingsButton.EDIT_PAGE.getName());
@@ -64,7 +64,7 @@ public class DA_MP_TC016_User_is_Able_To_Edit_The_Public_Setting_Of_Any_Page_Suc
 		loginPage.loginDA(Constants.USERNAME, Constants.PASSWORD);
 		
 		Log.info("Step #14: Check " + data.get("page_name_1") + "page is visible and can be accessed");
-		Assert.assertTrue(homePage.isChildPageCreadted(data.get("page_name_1")),
+		Assert.assertTrue(homePage.isChildPageDisplayed(data.get("page_name_1")),
 				String.format("%s is invisibled", data.get("page_name_1")));
 		
 //		Log.info("Step #15: Check " + data.get("page_name_2") + "page is invisible");
