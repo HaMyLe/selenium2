@@ -1,0 +1,31 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite thread-count="2" name="Login Suite" parallel="tests">
+	<test name="Login">
+		<parameter name="browser" value="CHROME" />
+		<classes>
+			<class name="SeleLv2.testcases.LOGIN.DA_LOGIN_TC001_Users_Able_to_Login_Successfully_with_Valid_Username_and_Password" />
+			<class name="SeleLv2.testcases.LOGIN.DA_LOGIN_TC002_Login_with_invalid_credentials"/> 
+			<class name="SeleLv2.testcases.LOGIN.DA_LOGIN_TC003_Login_with_incorrect_password"/> 
+			<class name="SeleLv2.testcases.LOGIN.DA_LOGIN_TC004_Login_with_diff_repo"/> 
+			<class name="SeleLv2.testcases.LOGIN.DA_LOGIN_TC005_Missing_login_dialog_when_switching_repo"/> 
+			<class name="SeleLv2.testcases.LOGIN.DA_LOGIN_TC006_Login_with_sensitive_password"/> 
+			<class name="SeleLv2.testcases.LOGIN.DA_LOGIN_TC007_Login_without_sensitive_username"/> 
+			<class name="SeleLv2.testcases.LOGIN.DA_LOGIN_TC008_Login_with_special_characters_password"/> 
+			<class name="SeleLv2.testcases.LOGIN.DA_LOGIN_TC009_Login_with_special_characters_username"/> 
+			<class name="SeleLv2.testcases.LOGIN.DA_LOGIN_TC010_Login_without_username_and_password"/>
+		</classes>
+	</test>
+
+	<test name="MP suite">
+		<parameter name="browser" value="IE" />
+		<classes>
+			<class name="SeleLv2.testcases.MP.DA_MP_TC011_User_is_Unable_Open_More_Than_1_NewPage_dialog" />
+			<class name="SeleLv2.testcases.MP.DA_MP_TC012_User_is_able_to_Add_Additional_Pages_Besides_Overview_Page_Successfully" />
+			<class name="SeleLv2.testcases.MP.DA_MP_TC013_Newly_Added_Main_Parent_Page_Is_Positioned_At_The_Location_Specified_As_Set_With_Displayed_After_Field_Of_New_Page" />
+			<class name="SeleLv2.testcases.MP.DA_MP_TC014_Public_Pages_Can_Be_Visible_And_Accessed_By_All_Users_Of_Working_Repository" />
+			<class name="SeleLv2.testcases.MP.DA_MP_TC015_Public_Pages_Can_Only_Be_Accessed_And_Visible_To_Their_Creators_With_Condition_That_All_Parent_Pages_Above_It_Are_Public" />
+			<class name="SeleLv2.testcases.MP.DA_MP_TC016_User_is_Able_To_Edit_The_Public_Setting_Of_Any_Page_Successfully" />
+		</classes>
+	</test>
+</suite>
