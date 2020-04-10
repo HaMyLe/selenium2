@@ -1,0 +1,18 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">	
+
+<suite name="Login Suite">
+<test name="Login">
+     <classes>
+       <class name="SeleLv2.testcases.LOGIN.DA_LOGIN_TC001_Users_Able_to_Login_Successfully_with_Valid_Username_and_Password"/>
+       <class name="SeleLv2.testcases.LOGIN.DA_LOGIN_TC002_Login_with_invalid_credentials"/>
+       <class name="SeleLv2.testcases.LOGIN.DA_LOGIN_TC003_Login_with_incorrect_password"/>
+       <class name="SeleLv2.testcases.LOGIN.DA_LOGIN_TC004_Login_with_diff_repo"/>
+       <class name="SeleLv2.testcases.LOGIN.DA_LOGIN_TC005_Missing_login_dialog_when_switching_repo"/>
+       <class name="SeleLv2.testcases.LOGIN.DA_LOGIN_TC006_Login_with_sensitive_password"/>
+       <class name="SeleLv2.testcases.LOGIN.DA_LOGIN_TC007_Login_without_sensitive_username"/>
+       <class name="SeleLv2.testcases.LOGIN.DA_LOGIN_TC008_Login_with_special_characters_password"/>
+       <class name="SeleLv2.testcases.LOGIN.DA_LOGIN_TC009_Login_with_special_characters_username"/>
+       <class name="SeleLv2.testcases.LOGIN.DA_LOGIN_TC010_Login_without_username_and_password"/>
+      </classes>
+   </test>
+</suite>
