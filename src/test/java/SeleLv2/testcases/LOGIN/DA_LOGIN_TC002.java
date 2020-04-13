@@ -10,12 +10,12 @@ import pages.HomePage;
 import pages.LoginPage;
 import utils.Log;
 
-public class DA_LOGIN_TC002_Login_with_invalid_credentials extends BaseTest {
+public class DA_LOGIN_TC002 extends BaseTest {
 	LoginPage loginPage = new LoginPage();
 	HomePage homePage = new HomePage();
 
-	@Test(dataProvider = "getDataForTest")
-	public void DA_LOGIN_TC002(Hashtable<String, String> data) throws IOException {
+	@Test(description="Verify that user fails to login specific repository successfully via Dashboard login page with incorrect credentials", dataProvider = "getDataForTest")
+	public void TC002(Hashtable<String, String> data) throws IOException {
 		Log.info("Verify that user fails to login specific repository successfully via Dashboard login page with incorrect credentials");
 
 		loginPage.loginDA(data.get("username"), data.get("password"), data.get("sample_repository"));

@@ -11,12 +11,12 @@ import pages.LoginPage;
 import utils.Constants;
 import utils.Log;
 
-public class DA_LOGIN_TC006_Login_with_sensitive_password extends BaseTest {
+public class DA_LOGIN_TC006 extends BaseTest {
 	LoginPage loginPage = new LoginPage();
 	HomePage homePage = new HomePage();
 
-	@Test(dataProvider = "getDataForTest")
-	public void DA_LOGIN_TC006(Hashtable<String, String> data) throws InterruptedException {
+	@Test(description="Verify that \"Password\" input is case sensitive", dataProvider = "getDataForTest")
+	public void TC006(Hashtable<String, String> data) throws InterruptedException {
 		Log.info("Verify that Password input is case sensitive");
 
 		loginPage.loginDA(data.get("username"), data.get("uppercase_password"));

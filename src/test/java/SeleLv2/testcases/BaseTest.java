@@ -1,10 +1,12 @@
 package SeleLv2.testcases;
 
-import org.apache.log4j.xml.DOMConfigurator;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
+import org.testng.annotations.Optional;
+import org.testng.annotations.Parameters;
+
 import java.lang.reflect.Method;
 
 import driver.DriverType;
@@ -19,28 +21,29 @@ public class BaseTest {
 
 	DriverManager driverManager;
 	WebDriver driver;
-	
+
 	@BeforeClass
-	public void setUp() {
-//		DOMConfigurator.configure("resources/log4j2.xml");
-		driverManager = DriverManagerFactory.getDriverManager(DriverType.CHROME);
+	@Parameters("browser")
+	public void setUp(@Optional String browser) {
+		DriverType current = DriverType.fromName(browser);
+		DriverManagerFactory.getDriverManager(current);
 		driver = driverManager.getWebDriver();
 		openBrowser();
 	}
-	
+
 	@AfterClass
 	public void tearDown() {
 		driver.quit();
 	}
-	
+
 	public void openBrowser() {
 		DriverUtils.maximumBrowser();
 		driver.get(Constants.URL);
 	}
-	
+
 	@DataProvider(name = "getDataForTest")
-	  public synchronized Object[][] getDataForTest(Method method) throws IOException {
+	public synchronized Object[][] getDataForTest(Method method) throws IOException {
 		String testMethodName = method.getName();
-	      return (Object[][]) JsonHelper.getDataFile("data.json", testMethodName);
-	  }
+		return (Object[][]) JsonHelper.getDataFile("data.json", testMethodName);
+	}
 }

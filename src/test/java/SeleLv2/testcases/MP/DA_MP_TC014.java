@@ -10,14 +10,14 @@ import utils.Constants;
 import utils.Log;
 import utils.SettingsButton;
 
-public class DA_MP_TC014_Public_Pages_Can_Be_Visible_And_Accessed_By_All_Users_Of_Working_Repository extends BaseTest {
+public class DA_MP_TC014 extends BaseTest {
 
 	LoginPage loginPage = new LoginPage();
 	HomePage homePage = new HomePage();
 	String pageName = "Test";
 
-	@Test
-	public void DA_MP_TC014() throws Exception {
+	@Test(description="Verify that Public pages can be visible and accessed by all users of working repository")
+	public void TC014() throws Exception {
 
 		Log.info("Step #1: Navigate to Dashboard login page and Login with valid account");
 		loginPage.loginDA(Constants.USERNAME, Constants.PASSWORD);

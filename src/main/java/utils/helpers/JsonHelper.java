@@ -6,39 +6,15 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.Hashtable;
-import java.util.List;
-
-import org.json.simple.JSONObject;
-import org.json.simple.parser.JSONParser;
 
 import com.google.gson.Gson;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
-import com.google.gson.reflect.TypeToken;
-
-import utils.data.TestData;
 
 public class JsonHelper {
 	private final static String jsonPath = "src/main/resources/data/";
-
-	public static synchronized JSONObject getData(String fileName, String testName, String vale) {
-
-		JSONObject dataObject = null;
-		try {
-			// Read json data
-			FileReader reader = new FileReader(getPathFile(jsonPath + fileName));
-			JSONParser jsonParser = new JSONParser();
-			JSONObject jsonObject = (JSONObject) jsonParser.parse(reader);
-			dataObject = (JSONObject) jsonObject;
-			System.out.println(dataObject);
-
-		} catch (Exception ex) {
-			ex.printStackTrace();
-		}
-		return dataObject;
-	}
 
 	public static String getPathFile(String filename) throws IOException {
 		String filePath = null;
@@ -46,29 +22,6 @@ public class JsonHelper {
 		return filePath;
 	}
 
-	public static void main(String[] args) {
-		try {
-			getDataFile("data.json", "DA_LOGIN_TC002");
-		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-	}
-
-	@SuppressWarnings("deprecation")
-	public static synchronized Object[][] getData(String fileName, String testCaseName) throws FileNotFoundException {
-		JsonElement jsonData = new JsonParser().parse(new FileReader(jsonPath + fileName));
-		JsonElement dataSet = jsonData.getAsJsonObject().get(testCaseName);
-		List<TestData> testData = new Gson().fromJson(dataSet, new TypeToken<List<TestData>>() {
-		}.getType());
-		Object[][] returnValue = new Object[testData.size()][1];
-		int index = 0;
-		for (Object[] each : returnValue) {
-			each[0] = testData.get(index++);
-		}
-		System.out.print(testData);
-		return returnValue;
-	}
 
 	@SuppressWarnings("deprecation")
 	public static synchronized Object[][] getDataFile(String fileName, String testName) throws FileNotFoundException {

@@ -9,13 +9,13 @@ import pages.LoginPage;
 import utils.Constants;
 import utils.Log;
 
-public class DA_MP_TC011_User_is_Unable_Open_More_Than_1_NewPage_dialog extends BaseTest {
+public class DA_MP_TC011 extends BaseTest {
 
 	LoginPage loginPage = new LoginPage();
 	HomePage homePage = new HomePage();
 
-	@Test
-	public void DA_MP_TC011() throws Exception {
+	@Test(description="Verify that user is unable open more than 1 New Page dialog")
+	public void TC011() throws Exception {
 
 		Log.info("Step #1: Navigate to Dashboard login page");
 		Log.info("Step #2: Login with valid account");

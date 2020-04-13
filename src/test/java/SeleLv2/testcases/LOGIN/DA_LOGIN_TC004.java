@@ -8,12 +8,12 @@ import pages.LoginPage;
 import utils.Constants;
 import utils.Log;
 
-public class DA_LOGIN_TC004_Login_with_diff_repo extends BaseTest {
+public class DA_LOGIN_TC004 extends BaseTest {
 	LoginPage loginPage = new LoginPage();
 	HomePage homePage = new HomePage();
 
-	@Test
-	public void DA_LOGIN_TC004() throws Exception {
+	@Test(description="Verify that user is able to log in different repositories successfully after logging out current repository")
+	public void TC004() throws Exception {
 		Log.info(
 				"Verify that user is able to log in different repositories successfully after logging out current repository");
 		loginPage.loginDA(Constants.USERNAME, Constants.PASSWORD, Constants.SAMPLE_REPO_NAME);

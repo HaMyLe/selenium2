@@ -10,14 +10,14 @@ import utils.Constants;
 import utils.Log;
 import utils.SettingsButton;
 
-public class DA_MP_TC012_User_is_able_to_Add_Additional_Pages_Besides_Overview_Page_Successfully extends BaseTest {
+public class DA_MP_TC012 extends BaseTest {
 
 	LoginPage loginPage = new LoginPage();
 	HomePage homePage = new HomePage();
 	String pageName = "Test";
 
-	@Test
-	public void DA_MP_TC012() throws Exception {
+	@Test(description="Verify that user is able to add additional pages besides Overview page successfully")
+	public void TC012() throws Exception {
 
 		Log.info("Step #1: Navigate to Dashboard login page and Login with valid account");
 		loginPage.loginDA(Constants.USERNAME, Constants.PASSWORD);

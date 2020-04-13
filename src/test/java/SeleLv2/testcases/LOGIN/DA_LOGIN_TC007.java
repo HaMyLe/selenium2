@@ -12,13 +12,13 @@ import pages.LoginPage;
 import utils.Constants;
 import utils.Log;
 
-public class DA_LOGIN_TC007_Login_without_sensitive_username extends BaseTest {
+public class DA_LOGIN_TC007 extends BaseTest {
 	
 	LoginPage loginPage = new LoginPage();
 	HomePage homePage = new HomePage();
 	
-	@Test(dataProvider = "getDataForTest")
-	public void DA_LOGIN_TC007(Hashtable<String, String> data) throws IOException {
+	@Test(description="Verify that Username is not case sensitive", dataProvider = "getDataForTest")
+	public void TC007(Hashtable<String, String> data) throws IOException {
 	  Log.info("Verify that Username is not case sensitive");
 	  
 	  loginPage.loginDA(data.get("uppercase_username"), data.get("password"));

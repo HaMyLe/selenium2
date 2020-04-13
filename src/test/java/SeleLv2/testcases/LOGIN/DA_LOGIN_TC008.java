@@ -12,13 +12,13 @@ import pages.LoginPage;
 import utils.Constants;
 import utils.Log;
 
-public class DA_LOGIN_TC008_Login_with_special_characters_password extends BaseTest {
+public class DA_LOGIN_TC008 extends BaseTest {
 	
 	LoginPage loginPage = new LoginPage();
 	HomePage homePage = new HomePage();
 	
-	@Test(dataProvider = "getDataForTest")
-	public void DA_LOGIN_TC008(Hashtable<String, String> data) throws IOException {
+	@Test(description="Verify that password with special characters is working correctly", dataProvider = "getDataForTest")
+	public void TC008(Hashtable<String, String> data) throws IOException {
 	  Log.info("DA_LOGIN_TC008: Verify that password with special characters is working correctly");
 	  
 	  loginPage.loginDA(data.get("username"), data.get("password"));

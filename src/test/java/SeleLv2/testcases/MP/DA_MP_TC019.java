@@ -12,14 +12,14 @@ import utils.Constants;
 import utils.Log;
 import utils.SettingsButton;
 
-public class DA_MP_TC019_User_Is_Able_To_Add_Additional_Sibbling_Page_Levels_To_The_Parent_Page_Successfully
+public class DA_MP_TC019
 		extends BaseTest {
 
 	LoginPage loginPage = new LoginPage();
 	HomePage homePage = new HomePage();
 
-	@Test(dataProvider = "getDataForTest")
-	public void DA_MP_TC019(Hashtable<String, String> data) throws Exception {
+	@Test(description="Verify that user is able to add additional sibbling page levels to the parent page successfully.", dataProvider = "getDataForTest")
+	public void TC019(Hashtable<String, String> data) throws Exception {
 
 		Log.info("Step #1: Navigate to Dashboard login page");
 		Log.info("Step #2: Login with valid account");
