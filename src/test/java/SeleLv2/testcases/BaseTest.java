@@ -25,9 +25,15 @@ public class BaseTest {
 	@BeforeClass
 	@Parameters("browser")
 	public void setUp(@Optional String browser) {
-		
-		DriverType current = !(browser.isEmpty() || browser==null) ? DriverType.fromName(browser):DriverType.CHROME;
+		DriverType current = !browser.isEmpty() ? DriverType.fromName(browser):DriverType.CHROME;
 		driverManager = DriverManagerFactory.getDriverManager(current);
+		driver = driverManager.getWebDriver();
+		openBrowser();
+	}
+	
+	@BeforeClass
+	public void setUp() {
+		driverManager = DriverManagerFactory.getDriverManager(DriverType.CHROME);
 		driver = driverManager.getWebDriver();
 		openBrowser();
 	}
