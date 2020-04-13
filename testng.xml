@@ -2,11 +2,11 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Suite">
   <test thread-count="5" name="Test">
-  <parameter name="browser" value="CHROME" />
+  <parameter name="browser" value="" />
     <classes>
       <class name="SeleLv2.testcases.LOGIN.DA_LOGIN_TC002"/>
-<!--       <class name="SeleLv2.testcases.LOGIN.DA_LOGIN_TC001"/> -->
-<!--       <class name="SeleLv2.testcases.LOGIN.DA_LOGIN_TC003"/> -->
+      <class name="SeleLv2.testcases.LOGIN.DA_LOGIN_TC001"/>
+      <class name="SeleLv2.testcases.LOGIN.DA_LOGIN_TC003"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

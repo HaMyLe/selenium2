@@ -3,7 +3,7 @@ package driver;
 import java.util.Arrays;
 
 public enum DriverType {
-	CHROME("CHROME"), FIREFOX("CHROME"), IE("CHROME");
+	CHROME("CHROME"), FIREFOX("FIREFOX"), IE("IE");
 
 	private final String name;
 
@@ -16,8 +16,7 @@ public enum DriverType {
 	}
 
 	public static DriverType fromName(String driverName) {
-		return Arrays.stream(DriverType.values()).filter(v -> v.name.equalsIgnoreCase(driverName))
-				.findAny()
+		return Arrays.stream(DriverType.values()).filter(v -> v.name.equalsIgnoreCase(driverName)).findAny()
 				.orElse(null);
 	}
 

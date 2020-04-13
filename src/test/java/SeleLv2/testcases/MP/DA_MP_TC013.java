@@ -12,14 +12,12 @@ import utils.Log;
 import utils.SettingsButton;
 import utils.helpers.CacheHelper;
 
-public class DA_MP_TC013
-		extends BaseTest {
+public class DA_MP_TC013 extends BaseTest {
 
 	LoginPage loginPage = new LoginPage();
 	HomePage homePage = new HomePage();
 
-	@Test(description="Verify that the newly added main parent page is positioned at the location specified as set with \"Displayed After\" field of \"New Page\" form on the main page bar/\"Parent Page\" dropped down menu			\r\n" + 
-			"", dataProvider = "getDataForTest")
+	@Test(description = "Verify that the newly added main parent page is positioned at the location specified as set with Displayed After field of New Page form on the main page bar Parent Page dropped down menu", dataProvider = "getDataForTest")
 	public void TC013(Hashtable<String, String> data) throws Exception {
 
 		Log.info("Step #1: Navigate to Dashboard login page and Login with valid account");

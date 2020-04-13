@@ -16,7 +16,7 @@ public class DA_MP_TC012 extends BaseTest {
 	HomePage homePage = new HomePage();
 	String pageName = "Test";
 
-	@Test(description="Verify that user is able to add additional pages besides Overview page successfully")
+	@Test(description = "Verify that user is able to add additional pages besides Overview page successfully")
 	public void TC012() throws Exception {
 
 		Log.info("Step #1: Navigate to Dashboard login page and Login with valid account");
