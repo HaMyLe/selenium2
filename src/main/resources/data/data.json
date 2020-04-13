@@ -1,70 +1,70 @@
 {
-    "DA_LOGIN_TC002":[{
+    "TC002":[{
       "message":"Username or password is invalid",
       "password":"abc",
       "username":"abc",
       "sample_repository": "SampleRepository"
     }],
-    "DA_LOGIN_TC003":[{
+    "TC003":[{
       "message":"Username or password is invalid",
       "password":"abc",
       "username":"administrator",
       "sample_repository": "SampleRepository"
     }],
-    "DA_LOGIN_TC006":[{
+    "TC006":[{
 		"username":"TEST",
 		"uppercase_password":"TEST",
 		"lowsercase_password": "test",
 		"error_message":"Username or password is invalid"
     }],
-    "DA_LOGIN_TC007":[{
+    "TC007":[{
     	"uppercase_username":"TAADMIN",
     	"lowsercase_username":"taadmin",
     	"password":"taadmin"
     }],
-    "DA_LOGIN_TC008":[{
+    "TC008":[{
     	"username":"tc008",
     	"password":"p@ssw0rd"
     }],
-    "DA_LOGIN_TC009":[{
+    "TC009":[{
     	"username":"tc009!",
     	"password":"taadmin"
     }],
-    "DA_LOGIN_TC010":[{
+    "TC010":[{
     	"username":"",
     	"password":"",
     	"error_message":"Please enter username!"
     }],
-    "DA_MP_TC013":[{
+    "TC013":[{
     	"page_name_1":"Page1",
     	"page_name_2":"Page2",
     	"display_after":"Page1"
     }],
-    "DA_MP_TC015":[{
+    "TC015":[{
     	"page_name_1":"Test",
     	"page_name_2":"Test_Child",
     	"parent_dropdown":"Test"
     }],
-    "DA_MP_TC016":[{
+    "TC016":[{
     	"page_name_1":"Test",
     	"page_name_2":"Another_Test"
     }],
-    "DA_MP_TC017":[{
+    "TC017":[{
     	"page_name":"Test",
     	"page_name_child":"Test_Child_1",
     	"confirm_message":"Are you sure you want to remove this page?",
     	"warning_message":"Cannot delete page 'Test' since it has child page(s)."
     }],
-    "DA_MP_TC018":[{
+    "TC018":[{
     	"page_name":"Test",
     	"page_name_child_1":"Test_Child_1",
     	"page_name_child_2":"Test_Child_2"
     }],
-    "DA_MP_TC019":[{
+    "TC019":[{
     	"page_name":"Test",
     	"parent_page":"Overview"
     }],
-    "DA_MP_TC020":[{
+    "TC020":[{
     	"page_name_1":"Page_1",
     	"parent_page_1":"Overview",
     	"page_name_2":"Page_2",

@@ -12,14 +12,13 @@ import utils.Log;
 import utils.SettingsButton;
 import utils.helpers.CacheHelper;
 
-public class DA_MP_TC015_Public_Pages_Can_Only_Be_Accessed_And_Visible_To_Their_Creators_With_Condition_That_All_Parent_Pages_Above_It_Are_Public
-		extends BaseTest {
+public class DA_MP_TC015 extends BaseTest {
 
 	LoginPage loginPage = new LoginPage();
 	HomePage homePage = new HomePage();
 
-	@Test(dataProvider = "getDataForTest")
-	public void DA_MP_TC015(Hashtable<String, String> data) throws Exception {
+	@Test(description = "Verify that non Public pages can only be accessed and visible to their creators with condition that all parent pages above it are Public", dataProvider = "getDataForTest")
+	public void TC015(Hashtable<String, String> data) throws Exception {
 
 		Log.info("Step #1: Navigate to Dashboard login page and Login with valid account");
 		loginPage.loginDA(Constants.USERNAME, Constants.PASSWORD);

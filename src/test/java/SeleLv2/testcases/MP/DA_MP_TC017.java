@@ -12,14 +12,13 @@ import utils.Constants;
 import utils.Log;
 import utils.SettingsButton;
 
-public class DA_MP_TC017_User_Can_Remove_Any_Main_Parent_Page_Except_Overview_Page_Successfully_And_The_Order_Of_Pages_Stays_Persistent_As_Long_As_There_Is_Not_Children_Page_Under_It
-		extends BaseTest {
+public class DA_MP_TC017 extends BaseTest {
 
 	LoginPage loginPage = new LoginPage();
 	HomePage homePage = new HomePage();
 
-	@Test(dataProvider = "getDataForTest")
-	public void DA_MP_TC017(Hashtable<String, String> data) throws Exception {
+	@Test(description = "Verify that user can remove any main parent page except Overview page successfully and the order of pages stays persistent as long as there is not children page under it", dataProvider = "getDataForTest")
+	public void TC017(Hashtable<String, String> data) throws Exception {
 
 		Log.info("Step #1: Navigate to Dashboard login page and Login with valid account");
 		loginPage.loginDA(Constants.USERNAME, Constants.PASSWORD);

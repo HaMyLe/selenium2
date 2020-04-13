@@ -13,13 +13,13 @@ import utils.Log;
 import utils.SettingsButton;
 import utils.helpers.CacheHelper;
 
-public class DA_MP_TC016_User_is_Able_To_Edit_The_Public_Setting_Of_Any_Page_Successfully extends BaseTest {
+public class DA_MP_TC016 extends BaseTest {
 
 	LoginPage loginPage = new LoginPage();
 	HomePage homePage = new HomePage();
 
-	@Test(dataProvider = "getDataForTest")
-	public void DA_MP_TC016(Hashtable<String, String> data) throws Exception {
+	@Test(description="Verify that user is able to edit the Public setting of any page successfully", dataProvider = "getDataForTest")
+	public void TC016(Hashtable<String, String> data) throws Exception {
 
 		Log.info("Step #1: Navigate to Dashboard login page and Login with valid account");
 		loginPage.loginDA(Constants.USERNAME, Constants.PASSWORD);

@@ -13,14 +13,14 @@ import utils.Constants;
 import utils.Log;
 import utils.SettingsButton;
 
-public class DA_MP_TC020_User_Is_Able_To_Delete_Sibbling_Page_As_Long_As_That_Page_Has_Not_Children_Page_Under_It
+public class DA_MP_TC020
 		extends BaseTest {
 
 	LoginPage loginPage = new LoginPage();
 	HomePage homePage = new HomePage();
 
-	@Test(dataProvider = "getDataForTest")
-	public void DA_MP_TC020(Hashtable<String, String> data) throws Exception {
+	@Test(description="Verify that user is able to delete sibbling page as long as that page has not children page under it", dataProvider = "getDataForTest")
+	public void TC020(Hashtable<String, String> data) throws Exception {
 
 		String menuPath1 = data.get("parent_page_1") + ">" + data.get("parent_page_2");
 		String menuPath2 = data.get("parent_page_1") + ">" + data.get("parent_page_2") + ">" + data.get("page_name_2");
