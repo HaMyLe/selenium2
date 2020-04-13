@@ -19,7 +19,6 @@ public class DA_LOGIN_TC009 extends BaseTest {
 
 	@Test(description = "Verify that username with special characters is working correctly", dataProvider = "getDataForTest")
 	public void TC009(Hashtable<String, String> data) throws IOException {
-
 		Log.info("Step #1: Navigate to Dashboard login page");
 		Log.info("Step #2: Login with account that has special characters password");
 		Log.info("Step #3: Observe the current page");

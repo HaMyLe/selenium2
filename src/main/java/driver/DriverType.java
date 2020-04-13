@@ -16,7 +16,8 @@ public enum DriverType {
 	}
 
 	public static DriverType fromName(String driverName) {
-		return Arrays.stream(DriverType.values()).filter(v -> v.name.equalsIgnoreCase(driverName)).findAny()
+		return Arrays.stream(DriverType.values()).filter(v -> v.name.equalsIgnoreCase(driverName))
+				.findAny()
 				.orElse(null);
 	}
 

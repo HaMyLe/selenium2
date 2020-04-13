@@ -13,13 +13,12 @@ import utils.Constants;
 import utils.Log;
 
 public class DA_LOGIN_TC007 extends BaseTest {
-
+	
 	LoginPage loginPage = new LoginPage();
 	HomePage homePage = new HomePage();
-
-	@Test(description = "Verify that Username is not case sensitive", dataProvider = "getDataForTest")
+	
+	@Test(description="Verify that Username is not case sensitive", dataProvider = "getDataForTest")
 	public void TC007(Hashtable<String, String> data) throws IOException {
-
 		Log.info("Step #1: Navigate to Dashboard login page");
 		Log.info("Step #2: Login with the account has uppercase username");
 		Log.info("Step #3: Observe the current page");
@@ -34,6 +33,6 @@ public class DA_LOGIN_TC007 extends BaseTest {
 
 		Log.info("Step #6: Observe the current page");
 		Assert.assertEquals(DriverUtils.getTitle(), Constants.TITLE_DASHBOARD);
-	}
+	 }
 
 }

@@ -25,11 +25,11 @@ public class BaseTest {
 	@BeforeClass
 	@Parameters("browser")
 	public void setUp(@Optional String browser) {
-		if (browser == "" || browser == null) {
+		if(browser == "" || browser == null) {
 			browser = PropertiesHelper.getPropValue("driver.browser");
 		}
 		DriverType current = DriverType.fromName(browser);
-		driverManager = DriverManagerFactory.getDriverManager(current);
+		DriverManagerFactory.getDriverManager(current);
 		driver = driverManager.getWebDriver();
 		openBrowser();
 	}

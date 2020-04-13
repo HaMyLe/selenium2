@@ -22,7 +22,7 @@ public class DA_LOGIN_TC003 extends BaseTest{
 		Log.info("Step #3: Click on Login button");
 		loginPage.loginDA(data.get("username"), data.get("password"),data.get("sample_repository"));
 		
-		Log.info("Verify that Dashboard Error message \"Username or password is invalid\" appears");
+		Log.info("Step #4: Verify that Dashboard Error message \"Username or password is invalid\" appears");
 		Assert.assertEquals(DriverUtils.getTextAlert(), data.get("message"));		
 	}
 }

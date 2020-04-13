@@ -18,7 +18,6 @@ public class DA_LOGIN_TC010 extends BaseTest {
 
 	@Test(description = "Verify that the page works correctly for the case when no input entered to Password and Username field", dataProvider = "getDataForTest")
 	public void TC010(Hashtable<String, String> data) throws IOException {
-		
 		Log.info("Step #1: Navigate to Dashboard login page");
 		Log.info("Step #2: Click Login button without entering data into Username and Password field");
 		Log.info("Step #3: Observe the current page");
