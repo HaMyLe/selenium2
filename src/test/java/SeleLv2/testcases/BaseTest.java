@@ -1,21 +1,16 @@
 package SeleLv2.testcases;
 
-import org.openqa.selenium.WebDriver;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.DataProvider;
-import org.testng.annotations.Optional;
-import org.testng.annotations.Parameters;
-
-import java.lang.reflect.Method;
-
 import driver.DriverType;
 import driver.DriverUtils;
 import driver.manager.DriverManager;
 import driver.manager.DriverManagerFactory;
+import org.openqa.selenium.WebDriver;
+import org.testng.annotations.*;
 import utils.Constants;
-import utils.helpers.*;
+import utils.helpers.JsonHelper;
+
 import java.io.IOException;
+import java.lang.reflect.Method;
 
 public class BaseTest {
 
@@ -25,15 +20,8 @@ public class BaseTest {
 	@BeforeClass
 	@Parameters("browser")
 	public void setUp(@Optional String browser) {
-		DriverType current = !browser.isEmpty() ? DriverType.fromName(browser):DriverType.CHROME;
+		DriverType current = (browser != null && !"".equals(browser)) ? DriverType.fromName(browser) : DriverType.CHROME;
 		driverManager = DriverManagerFactory.getDriverManager(current);
-		driver = driverManager.getWebDriver();
-		openBrowser();
-	}
-	
-	@BeforeClass
-	public void setUp() {
-		driverManager = DriverManagerFactory.getDriverManager(DriverType.CHROME);
 		driver = driverManager.getWebDriver();
 		openBrowser();
 	}
