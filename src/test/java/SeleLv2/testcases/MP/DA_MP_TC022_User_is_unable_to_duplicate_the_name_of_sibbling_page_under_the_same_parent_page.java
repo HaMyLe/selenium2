@@ -1,5 +1,0 @@
-package SeleLv2.testcases.MP;
-
-public class DA_MP_TC022_User_is_unable_to_duplicate_the_name_of_sibbling_page_under_the_same_parent_page {
-
-}

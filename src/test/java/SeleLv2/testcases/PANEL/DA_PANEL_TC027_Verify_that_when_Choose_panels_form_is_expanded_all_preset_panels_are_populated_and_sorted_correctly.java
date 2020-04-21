@@ -1,5 +1,0 @@
-package SeleLv2.testcases.PANEL;
-
-public class DA_PANEL_TC027_Verify_that_when_Choose_panels_form_is_expanded_all_preset_panels_are_populated_and_sorted_correctly {
-
-}

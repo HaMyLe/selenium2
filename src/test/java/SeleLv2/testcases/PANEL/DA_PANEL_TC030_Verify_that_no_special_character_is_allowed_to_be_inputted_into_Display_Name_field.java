@@ -1,5 +1,0 @@
-package SeleLv2.testcases.PANEL;
-
-public class DA_PANEL_TC030_Verify_that_no_special_character_is_allowed_to_be_inputted_into_Display_Name_field {
-
-}

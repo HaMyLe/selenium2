@@ -196,7 +196,7 @@ public class HomePage extends GeneralPage {
 		return lnkDynamicPositionBeside.isVisible();
 	}
 
-	public void gotToEditPage(String page, String item) {
+	public void goToEditPage(String page, String item) {
 		waitForPageLoad();
 		selectMenuPage(page);
 		selectItemsSetting(item);

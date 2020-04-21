@@ -86,6 +86,43 @@
     	"password":"test",
     	"page_name_1":"Test",
     	"page_name_2":"Test_Child_1",
-    	"parent_page_name_2": "Test"
+    	"parent_page_name_2": "Test",
+    	"warning_message":"Test Child 1 already exist. Please enter a diffrerent name."
+    }],
+    "DA_MP_TC023":[{
+    	"username":"test",
+    	"password":"test",
+    	"page_name_1":"Page_1",
+    	"parent_page_name_1": "Overview",
+    	"page_name_2":"Page_2",
+    	"parent_page_name_2": "Page_1",
+    	"page_name_3":"Page_3"
+    }],
+    "DA_MP_TC024":[{
+    	"username":"test",
+    	"password":"test",
+    	"page_name_1":"Page_1",
+    	"parent_page_name_1": "Overview",
+    	"page_name_2":"Page_2",
+    	"parent_page_name_2": "Page_1"
+    }],
+    "DA_MP_TC025":[{
+    	"username":"test",
+    	"password":"test",
+    	"page_name_1":"Page_1",
+    	"page_name_2":"Page_2",
+    	"parent_page_name": "Overview"
+    }],
+    "DA_MP_TC026":[{
+    	"username":"test",
+    	"password":"test",
+    	"page_name_1":"Page_1",
+    	"number_of_column_1":"2",
+    	"number_of_column_2":"3"
+    }],
+    "DA_MP_TC027":[{
+    	"username":"test",
+    	"password":"test",
+    	"page_name_1":"Page_1"
     }]
 }
