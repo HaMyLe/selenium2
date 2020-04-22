@@ -1,16 +1,11 @@
 package SeleLv2.testcases.MP;
 
 import java.util.Hashtable;
-
-import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
 import SeleLv2.testcases.BaseTest;
 import pages.HomePage;
 import pages.LoginPage;
-import utils.Constants;
 import utils.Log;
-import utils.SettingsButton;
-import utils.helpers.CacheHelper;
 
 public class DA_MP_TC024 extends BaseTest{
 	
@@ -35,13 +30,13 @@ public class DA_MP_TC024 extends BaseTest{
 		homePage.addNewPage(data.get("page_name_2"), data.get("parent_page_name_2"), null, null, false);
 		
 		Log.info("Step #6: Go to Page 1");
-		homePage.goToPage(path); 
+		homePage.selectMenuPath(data.get("path_page1")); 
 		
 		Log.info("VP #1: Observe the current page");
 		homePage.isPageDisplayed(data.get("page_name_1"));
 		
 		Log.info("Step #7: Go to Page 2");
-		homePage.goToPage(path); 
+		homePage.selectMenuPath(data.get("path_page2")); 
 		
 		Log.info("VP #2: Observe the current page");
 		homePage.isPageDisplayed(data.get("page_name_2"));

@@ -29,7 +29,5 @@ public class AddNewPage extends GeneralPage {
 		chkIsPublic.click();
 
 	}
-	
-	
 
 }

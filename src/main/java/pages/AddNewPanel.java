@@ -24,6 +24,8 @@ public class AddNewPanel extends GeneralPage {
 	private CheckBox chkCategories       = new CheckBox("id=chkCategoriesName");
 	private CheckBox chkValue            = new CheckBox("id=chkValue");
 	private CheckBox chkPercentage       = new CheckBox("id=chkPercentage");
+	private Button btnOK                 = new Button("id=OK");
+	private Button btnCancel             = new Button("id=Cancel");
 	
 	public void selectType(String type) {
 		radioType.setDynamicValue(type);
@@ -41,6 +43,22 @@ public class AddNewPanel extends GeneralPage {
 		radioLegends.setDynamicValue(legend);
 		radioLegends.waitForVisibility();
 		radioLegends.click();
+	}
+	
+	public void enterDisplayName(String displayName) {
+		txtDisplayName.enter(displayName);
+	}
+	
+	public void enterChartTitle(String chartTitle) {
+		txtChartTitle.enter(chartTitle);
+	}
+	
+	public void enterCaptionOfCategory(String caption) {
+		txtCaptionOfCategory.enter(caption);
+	}
+	
+	public void enterCaptionOfSeries(String caption) {
+		txtCaptionOfSeries.enter(caption);
 	}
 	
 

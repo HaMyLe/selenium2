@@ -1,9 +1,7 @@
 package SeleLv2.testcases.MP;
 
 import java.util.Hashtable;
-
 import org.testng.annotations.Test;
-
 import SeleLv2.testcases.BaseTest;
 import pages.HomePage;
 import pages.LoginPage;
@@ -32,13 +30,14 @@ public class DA_MP_TC025 extends BaseTest{
 		homePage.addNewPage(data.get("page_name_2"), null, null, null, false);
 		
 		Log.info("Step #6: Click Edit link for Page 2 created page");
-		homePage.goToPage(path);
+		homePage.selectMenuPath(data.get("path_page2"));
 		homePage.selectItemsSetting("Edit");
 		
 		Log.info("Step #7: Change value Display After for the second created page to after Overview page ");
 		homePage.editNewPage(null, data.get("parent_page_name"), null, null, false);
 		
 		Log.info("VP #1: Observe the current page");
+		homePage.selectMenuPath(data.get("path_page2_new"));
 		homePage.isChildPageDisplayed(data.get("page_name_2"));
 		
     }
