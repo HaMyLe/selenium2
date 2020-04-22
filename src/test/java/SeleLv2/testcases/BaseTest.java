@@ -6,6 +6,7 @@ import driver.manager.DriverManager;
 import driver.manager.DriverManagerFactory;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.*;
+import utils.Common;
 import utils.Constants;
 import utils.helpers.JsonHelper;
 
@@ -30,6 +31,11 @@ public class BaseTest {
 	public void tearDown() {
 		driver.quit();
 	}
+
+//	@AfterSuite
+//	public void generateReport(){
+//		Common.executeCmd(Constants.generateAllureRpCmd);
+//	}
 
 	public void openBrowser() {
 		DriverUtils.maximumBrowser();
