@@ -42,7 +42,7 @@ public class DA_MP_TC016 extends BaseTest {
 				String.format("%s isn't displayed", data.get("page_name_1")));
 
 		Log.info("Step #6: Go to Global Setting -> Edit page");
-		homePage.gotToEditPage(data.get("page_name_1"), SettingsButton.EDIT_PAGE.getName());
+		homePage.goToEditPage(data.get("page_name_1"), SettingsButton.EDIT_PAGE.getName());
 
 		Log.info("Step #7: Check \"Edit Page\" pop up window is displayed");
 		Assert.assertTrue(homePage.isDialogPageDisplayed("Edit Page"), "Edit Page pop up doesn't display");
@@ -51,7 +51,7 @@ public class DA_MP_TC016 extends BaseTest {
 		homePage.editNewPage(data.get("page_name_1"), true);
 
 		Log.info("Step #9: Go to Global Setting -> Edit page");
-		homePage.gotToEditPage(data.get("page_name_2"), SettingsButton.EDIT_PAGE.getName());
+		homePage.goToEditPage(data.get("page_name_2"), SettingsButton.EDIT_PAGE.getName());
 
 		Log.info("Step #10: Check \"Edit Page\" pop up window is displayed");
 		Assert.assertTrue(homePage.isDialogPageDisplayed("Edit Page"), "Edit Page pop up doesn't display");

@@ -25,7 +25,7 @@ public class JsonHelper {
 	@SuppressWarnings("deprecation")
 	public static synchronized Object[][] getDataFile(String fileName, String testName) throws FileNotFoundException {
 
-		Object[][] data = new Object[0][1];
+		Object[][] data;
 
 		// Read json file data using Gson library
 		BufferedReader br = null;

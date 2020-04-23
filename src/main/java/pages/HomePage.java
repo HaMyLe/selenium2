@@ -10,6 +10,7 @@ import controls.common.Link;
 import controls.common.TextBox;
 import driver.DriverUtils;
 import utils.Log;
+import utils.SettingsButton;
 
 public class HomePage extends GeneralPage {
 
@@ -74,7 +75,11 @@ public class HomePage extends GeneralPage {
 		lnkDynamicIttemSetting.waitForVisibility();
 		lnkDynamicIttemSetting.click();
 	}
-	
+
+	public void selectItemsSetting(SettingsButton item) {
+		selectItemsSetting(item.getName());
+	}
+
 	public boolean isItemUnderSettingDisplayed(String item) {
 		clickIconSetting();
 		return lnkDynamicIttemSetting.isVisible();
@@ -82,7 +87,7 @@ public class HomePage extends GeneralPage {
 	
 	public void selectAddPage() {
 		try {
-			selectItemsSetting("Add Page");
+			selectItemsSetting(SettingsButton.ADD_PAGE);
 		} catch (ElementClickInterceptedException e) {
 			Log.info("Element is not interacted");
 		}
@@ -95,7 +100,7 @@ public class HomePage extends GeneralPage {
 	}
 
 	public void fillDataToAddPage(String pageName, String parentPage, String numberOfColumn, String displayAfter,
-			Boolean ispublic) {
+			Boolean isPublic) {
 		txtPageName.waitForVisibility();
 		txtPageName.clear();
 		txtPageName.enter(pageName);
@@ -112,14 +117,14 @@ public class HomePage extends GeneralPage {
 			cbxDisplayAfter.select(displayAfter);
 		}
 		ckbPublic.waitForVisibility();
-		ckbPublic.setState(ispublic);
+		ckbPublic.setState(isPublic);
 
 	}
 
 	public void addNewPage(String pageName, String parentPage, String numberOfColumn, String displayAfter,
-			Boolean ispublic) {
+			Boolean isPublic) {
 		waitForPageLoad();
-		fillDataToAddPage(pageName, parentPage, numberOfColumn, displayAfter, ispublic);
+		fillDataToAddPage(pageName, parentPage, numberOfColumn, displayAfter, isPublic);
 		clickButtonOkDialog();
 		btnOkButton.waitForInVisibility();
 	}
@@ -139,16 +144,16 @@ public class HomePage extends GeneralPage {
 	}
 
 	public void editNewPage(String pageName, String parentPage, String numberOfColumn, String displayAfter,
-			Boolean ispublic) {
+			Boolean isPublic) {
 		waitForPageLoad();
-		fillDataToAddPage(pageName, parentPage, numberOfColumn, displayAfter, ispublic);
+		fillDataToAddPage(pageName, parentPage, numberOfColumn, displayAfter, isPublic);
 		clickButtonOkDialog();
 		btnOkButton.waitForInVisibility();
 	}
 	
-	public void editNewPage(String pageName,Boolean ispublic) {
+	public void editNewPage(String pageName, Boolean isPublic) {
 		waitForPageLoad();
-		fillDataToAddPage(pageName, null, null, null, ispublic);
+		fillDataToAddPage(pageName, null, null, null, isPublic);
 		clickButtonOkDialog();
 		btnOkButton.waitForInVisibility();
 	}
