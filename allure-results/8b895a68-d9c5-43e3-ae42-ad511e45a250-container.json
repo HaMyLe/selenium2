@@ -1,1 +1,0 @@
-{"uuid":"8b895a68-d9c5-43e3-ae42-ad511e45a250","name":"SeleLv2.testcases.DA_LOGIN_TC002_Login_with_invalid_credentials","start":1585054660727,"stop":1585054673843,"children":["eeafd029-67c8-4f9b-b223-64baac0e4908"],"befores":[{"name":"generateReport","status":"passed","stage":"finished","description":"","start":1585054660767,"stop":1585054660783}]}

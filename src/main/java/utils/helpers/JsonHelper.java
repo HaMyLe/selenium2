@@ -22,7 +22,6 @@ public class JsonHelper {
 		return filePath;
 	}
 
-
 	@SuppressWarnings("deprecation")
 	public static synchronized Object[][] getDataFile(String fileName, String testName) throws FileNotFoundException {
 

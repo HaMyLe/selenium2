@@ -6,8 +6,11 @@ import driver.manager.DriverManager;
 import driver.manager.DriverManagerFactory;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.*;
+import utils.Common;
 import utils.Constants;
+import utils.Log;
 import utils.helpers.JsonHelper;
+import utils.helpers.PropertiesHelper;
 
 import java.io.IOException;
 import java.lang.reflect.Method;
@@ -29,6 +32,14 @@ public class BaseTest {
 	@AfterClass
 	public void tearDown() {
 		driver.quit();
+	}
+
+	@AfterSuite
+	public void generateReport() {
+		if (PropertiesHelper.getPropValue("report.generate").equals("true")) {
+			Common.executeCmd(Constants.GENERATE_ALLURE_REPORT);
+			Log.info("Generate allure report");
+		}
 	}
 
 	public void openBrowser() {
