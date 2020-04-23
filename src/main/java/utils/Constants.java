@@ -23,5 +23,5 @@ public class Constants {
 	public static final int VERY_SHORT_TIME = Integer.parseInt(PropertiesHelper.getPropValue("common.very.short.time"));
 
 	//REPORT
-	public static final String generateAllureRpCmd = "allure generate --clean";
+	public static final String GENERATE_ALLURE_REPORT = "allure generate --clean";
 }

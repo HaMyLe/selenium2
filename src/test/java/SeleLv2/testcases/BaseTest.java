@@ -8,7 +8,9 @@ import org.openqa.selenium.WebDriver;
 import org.testng.annotations.*;
 import utils.Common;
 import utils.Constants;
+import utils.Log;
 import utils.helpers.JsonHelper;
+import utils.helpers.PropertiesHelper;
 
 import java.io.IOException;
 import java.lang.reflect.Method;
@@ -32,10 +34,13 @@ public class BaseTest {
 		driver.quit();
 	}
 
-//	@AfterSuite
-//	public void generateReport(){
-//		Common.executeCmd(Constants.generateAllureRpCmd);
-//	}
+	@AfterSuite
+	public void generateReport() {
+		if (PropertiesHelper.getPropValue("report.generate").equals("true")) {
+			Common.executeCmd(Constants.GENERATE_ALLURE_REPORT);
+			Log.info("Generate allure report");
+		}
+	}
 
 	public void openBrowser() {
 		DriverUtils.maximumBrowser();

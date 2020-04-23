@@ -8,3 +8,4 @@ allure-results
 *.iml
 .classpath
 .idea
+allure-report/*
