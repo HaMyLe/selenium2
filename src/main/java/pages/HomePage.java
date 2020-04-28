@@ -1,7 +1,6 @@
 package pages;
 
 import org.openqa.selenium.ElementClickInterceptedException;
-
 import controls.common.Button;
 import controls.common.CheckBox;
 import controls.common.ComboBox;
@@ -33,6 +32,8 @@ public class HomePage extends GeneralPage {
 	private Link lnkDynamicPositionBeside = new Link("//li[@class='active']/preceding-sibling::li/a[text()='%s']");
 	private ComboBox cbbRepo = new ComboBox("id=ulListRepositories");
 
+	AddNewPanel newPanel = new AddNewPanel();
+	
 	public String getUserName() {
 		lnkUser.waitForDisplay();
 		return lnkUser.getText();
@@ -215,6 +216,13 @@ public class HomePage extends GeneralPage {
 	
 	public String getAlterMessage() {
 		return DriverUtils.getTextAlert().trim();
+	}
+	
+	public void addNewPanel(String displayName, String type, String dataProfile) {
+		waitForPageLoad();
+		fillNewPanelPage(displayName)
+		clickButtonOkDialog();
+		btnOkButton.waitForInVisibility();
 	}
 
 }

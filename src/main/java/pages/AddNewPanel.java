@@ -20,12 +20,7 @@ public class AddNewPanel extends GeneralPage {
 	private ComboBox cbbSeries           = new ComboBox("id=cbbSeriesField");
 	private TextBox txtCaptionOfSeries   = new TextBox("id=txtValueYAxis");
 	private Link radioLegends            = new Link("//input[@value='%s']");
-	private CheckBox chkSeries           = new CheckBox("id=chkSeriesName");
-	private CheckBox chkCategories       = new CheckBox("id=chkCategoriesName");
-	private CheckBox chkValue            = new CheckBox("id=chkValue");
-	private CheckBox chkPercentage       = new CheckBox("id=chkPercentage");
-	private Button btnOK                 = new Button("id=OK");
-	private Button btnCancel             = new Button("id=Cancel");
+	private Link radioDataLabel            = new Link("//td//label[contains(text(),'Series')]");
 	
 	public void selectType(String type) {
 		radioType.setDynamicValue(type);
@@ -39,10 +34,16 @@ public class AddNewPanel extends GeneralPage {
 		radioStyle.click();
 	}
 	
-	public void selectLegendse(String legend) {
+	public void selectLegend(String legend) {
 		radioLegends.setDynamicValue(legend);
 		radioLegends.waitForVisibility();
 		radioLegends.click();
+	}
+	
+	public void selectDataLabel(String dataLabel) {
+		radioDataLabel.setDynamicValue(dataLabel);
+		radioDataLabel.waitForVisibility();
+		radioDataLabel.click();
 	}
 	
 	public void enterDisplayName(String displayName) {
@@ -61,5 +62,28 @@ public class AddNewPanel extends GeneralPage {
 		txtCaptionOfSeries.enter(caption);
 	}
 	
+	
+	public void fillChartSetting(String chartTitle,boolean isShowTitle, String chartType, String style, String category, String captionOfCategory,
+			String series, String captionOfSeries, String legends, String dataLabel) {
+		enterChartTitle(chartTitle);
+		chkShowTitle.click();
+		cbbChartType.select(chartType);
+		selectStyle(style);
+		cbbCategory.select(category);
+		enterCaptionOfCategory(captionOfCategory);
+		cbbSeries.select(series);
+		enterCaptionOfSeries(captionOfSeries);
+		selectLegend(legends);
+		selectDataLabel(dataLabel);
+	}
+	
+	public void fillNewPanelPage(String type, String dataProfile, String displayName, String chartTitle,
+			boolean isShowTitle, String chartType, String style, String category, String captionOfCategory,
+			String series, String captionOfSeries, String legends, String dataLabel) {
+		selectType(type);
+		cbbDataProfile.select(dataProfile);
+		enterDisplayName(displayName);
+		fillChartSetting(chartTitle, isShowTitle, chartType, style, category, captionOfCategory, series, captionOfSeries, legends, dataLabel);
+	}
 
 }
