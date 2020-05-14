@@ -130,6 +130,8 @@
     "TC027":[{
     	"username":"test",
     	"password":"test",
-    	"page_name_1":"Page_1"
+    	"page_name_1":"Page_1",
+    	"display_name":"zbox",
+    	"series":""
     }]
 }

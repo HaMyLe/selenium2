@@ -16,7 +16,7 @@ public class DA_PANEL_TC027 extends BaseTest {
 	HomePage homePage = new HomePage();
 	
     @Test (description = "Verify that when Choose panels form is expanded all pre-set panels are populated and sorted correctly", dataProvider = "getDataForTest")
-	public void DA_LOGIN_TC023(Hashtable<String, String> data) {
+	public void DA_LOGIN_TC027(Hashtable<String, String> data) {
 		Log.info("Step #1: Login with valid account");
 		loginPage.loginDA(data.get("username"), data.get("password"), data.get("sample_repository"));
 		
@@ -30,6 +30,15 @@ public class DA_PANEL_TC027 extends BaseTest {
 		homePage.selectItemsSetting(SettingsButton.CREATE_PANEL);
 		
 		Log.info("Step #5: Enter Panel name into Display Name textbox");
+		homePage.addNewPanel(data.get("display_name"),null,null,data.get("series"));
+		
+		Log.info("Step #6: Click Ok button in Panel Configuration popup");
+		homePage.clickOkButtonAlert();
+		
+		Log.info("Step #7: Click on Choose Panel menu icon next to Global Setting icon");
+//		homePage.selectItemsSetting(SettingsButton.ADD_PAGE);
+		
+		Log.info("Verify that all pre-set panels are populated and sorted correctly");
 		
     }
 }

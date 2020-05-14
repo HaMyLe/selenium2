@@ -218,11 +218,18 @@ public class HomePage extends GeneralPage {
 		return DriverUtils.getTextAlert().trim();
 	}
 	
-	public void addNewPanel(String displayName, String type, String dataProfile) {
+	public void clickOkButtonAlert() {
+		 DriverUtils.acceptAltert();
+	}
+	
+	public void addNewPanel(String displayName, String type, String dataProfile, String serie) {
 		waitForPageLoad();
-		fillNewPanelPage(displayName)
+		newPanel.fillNewPanelPage(type, dataProfile, displayName, null, false, null, null, null, null, serie, null, null, null);
 		clickButtonOkDialog();
 		btnOkButton.waitForInVisibility();
 	}
-
+	
+	public void clickUserLink() {
+		lnkUser.click();
+	}
 }
