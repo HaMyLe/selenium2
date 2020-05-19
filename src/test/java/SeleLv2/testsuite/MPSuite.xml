@@ -1,0 +1,14 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">	
+
+<suite name="MP Suite" >
+<test name="MP">
+     <classes>
+       <class name="SeleLv2.testcases.MP.DA_MP_TC011"/>
+       <class name="SeleLv2.testcases.MP.DA_MP_TC012"/>
+       <class name="SeleLv2.testcases.MP.DA_MP_TC013"/>
+       <class name="SeleLv2.testcases.MP.DA_MP_TC014"/>
+       <class name="SeleLv2.testcases.MP.DA_MP_TC015"/>
+       <class name="SeleLv2.testcases.MP.DA_MP_TC016"/>
+      </classes>
+   </test>
+</suite>

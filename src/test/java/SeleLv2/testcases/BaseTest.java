@@ -1,19 +1,25 @@
 package SeleLv2.testcases;
 
+import java.io.IOException;
+import java.lang.reflect.Method;
+
+import org.openqa.selenium.WebDriver;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterSuite;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Optional;
+import org.testng.annotations.Parameters;
+
 import driver.DriverType;
 import driver.DriverUtils;
 import driver.manager.DriverManager;
 import driver.manager.DriverManagerFactory;
-import org.openqa.selenium.WebDriver;
-import org.testng.annotations.*;
 import utils.Common;
 import utils.Constants;
 import utils.Log;
 import utils.helpers.JsonHelper;
 import utils.helpers.PropertiesHelper;
-
-import java.io.IOException;
-import java.lang.reflect.Method;
 
 public class BaseTest {
 

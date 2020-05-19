@@ -1,0 +1,31 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite thread-count="2" name="Parallel Suite" parallel="classes">
+	<test name="Login">
+		<parameter name="browser" value="CHROME" />
+		<classes>
+			<class name="SeleLv2.testcases.LOGIN.DA_LOGIN_TC001" />
+			<class name="SeleLv2.testcases.LOGIN.DA_LOGIN_TC002" />
+			<class name="SeleLv2.testcases.LOGIN.DA_LOGIN_TC003" />
+			<class name="SeleLv2.testcases.LOGIN.DA_LOGIN_TC004" />
+			<class name="SeleLv2.testcases.LOGIN.DA_LOGIN_TC005" />
+			<class name="SeleLv2.testcases.LOGIN.DA_LOGIN_TC006" />
+			<class name="SeleLv2.testcases.LOGIN.DA_LOGIN_TC007" />
+			<class name="SeleLv2.testcases.LOGIN.DA_LOGIN_TC008" />
+			<class name="SeleLv2.testcases.LOGIN.DA_LOGIN_TC009" />
+			<class name="SeleLv2.testcases.LOGIN.DA_LOGIN_TC010" />
+		</classes>
+	</test>
+
+	<test name="MP suite">
+		<parameter name="browser" value="FIREFOX" />
+		<classes>
+			<class name="SeleLv2.testcases.MP.DA_MP_TC011" />
+			<class name="SeleLv2.testcases.MP.DA_MP_TC012" />
+			<class name="SeleLv2.testcases.MP.DA_MP_TC013" />
+			<class name="SeleLv2.testcases.MP.DA_MP_TC014" />
+			<class name="SeleLv2.testcases.MP.DA_MP_TC015" />
+			<class name="SeleLv2.testcases.MP.DA_MP_TC016" />
+		</classes>
+	</test>
+</suite>
