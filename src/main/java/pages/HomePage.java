@@ -1,7 +1,6 @@
 package pages;
 
 import org.openqa.selenium.ElementClickInterceptedException;
-
 import controls.common.Button;
 import controls.common.CheckBox;
 import controls.common.ComboBox;
@@ -10,6 +9,7 @@ import controls.common.Link;
 import controls.common.TextBox;
 import driver.DriverUtils;
 import utils.Log;
+import utils.SettingsButton;
 
 public class HomePage extends GeneralPage {
 
@@ -32,6 +32,8 @@ public class HomePage extends GeneralPage {
 	private Link lnkDynamicPositionBeside = new Link("//li[@class='active']/preceding-sibling::li/a[text()='%s']");
 	private ComboBox cbbRepo = new ComboBox("id=ulListRepositories");
 
+	AddNewPanel newPanel = new AddNewPanel();
+	
 	public String getUserName() {
 		lnkUser.waitForDisplay();
 		return lnkUser.getText();
@@ -74,7 +76,11 @@ public class HomePage extends GeneralPage {
 		lnkDynamicIttemSetting.waitForVisibility();
 		lnkDynamicIttemSetting.click();
 	}
-	
+
+	public void selectItemsSetting(SettingsButton item) {
+		selectItemsSetting(item.getName());
+	}
+
 	public boolean isItemUnderSettingDisplayed(String item) {
 		clickIconSetting();
 		return lnkDynamicIttemSetting.isVisible();
@@ -82,7 +88,7 @@ public class HomePage extends GeneralPage {
 	
 	public void selectAddPage() {
 		try {
-			selectItemsSetting("Add Page");
+			selectItemsSetting(SettingsButton.ADD_PAGE);
 		} catch (ElementClickInterceptedException e) {
 			Log.info("Element is not interacted");
 		}
@@ -95,7 +101,7 @@ public class HomePage extends GeneralPage {
 	}
 
 	public void fillDataToAddPage(String pageName, String parentPage, String numberOfColumn, String displayAfter,
-			Boolean ispublic) {
+			Boolean isPublic) {
 		txtPageName.waitForVisibility();
 		txtPageName.clear();
 		txtPageName.enter(pageName);
@@ -112,14 +118,14 @@ public class HomePage extends GeneralPage {
 			cbxDisplayAfter.select(displayAfter);
 		}
 		ckbPublic.waitForVisibility();
-		ckbPublic.setState(ispublic);
+		ckbPublic.setState(isPublic);
 
 	}
 
 	public void addNewPage(String pageName, String parentPage, String numberOfColumn, String displayAfter,
-			Boolean ispublic) {
+			Boolean isPublic) {
 		waitForPageLoad();
-		fillDataToAddPage(pageName, parentPage, numberOfColumn, displayAfter, ispublic);
+		fillDataToAddPage(pageName, parentPage, numberOfColumn, displayAfter, isPublic);
 		clickButtonOkDialog();
 		btnOkButton.waitForInVisibility();
 	}
@@ -139,16 +145,16 @@ public class HomePage extends GeneralPage {
 	}
 
 	public void editNewPage(String pageName, String parentPage, String numberOfColumn, String displayAfter,
-			Boolean ispublic) {
+			Boolean isPublic) {
 		waitForPageLoad();
-		fillDataToAddPage(pageName, parentPage, numberOfColumn, displayAfter, ispublic);
+		fillDataToAddPage(pageName, parentPage, numberOfColumn, displayAfter, isPublic);
 		clickButtonOkDialog();
 		btnOkButton.waitForInVisibility();
 	}
 	
-	public void editNewPage(String pageName,Boolean ispublic) {
+	public void editNewPage(String pageName, Boolean isPublic) {
 		waitForPageLoad();
-		fillDataToAddPage(pageName, null, null, null, ispublic);
+		fillDataToAddPage(pageName, null, null, null, isPublic);
 		clickButtonOkDialog();
 		btnOkButton.waitForInVisibility();
 	}
@@ -196,7 +202,7 @@ public class HomePage extends GeneralPage {
 		return lnkDynamicPositionBeside.isVisible();
 	}
 
-	public void gotToEditPage(String page, String item) {
+	public void goToEditPage(String page, String item) {
 		waitForPageLoad();
 		selectMenuPage(page);
 		selectItemsSetting(item);
@@ -211,5 +217,19 @@ public class HomePage extends GeneralPage {
 	public String getAlterMessage() {
 		return DriverUtils.getTextAlert().trim();
 	}
-
+	
+	public void clickOkButtonAlert() {
+		 DriverUtils.acceptAltert();
+	}
+	
+	public void addNewPanel(String displayName, String type, String dataProfile, String serie) {
+		waitForPageLoad();
+		newPanel.fillNewPanelPage(type, dataProfile, displayName, null, false, null, null, null, null, serie, null, null, null);
+		clickButtonOkDialog();
+		btnOkButton.waitForInVisibility();
+	}
+	
+	public void clickUserLink() {
+		lnkUser.click();
+	}
 }

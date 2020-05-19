@@ -70,5 +70,68 @@
     	"page_name_2":"Page_2",
     	"parent_page_2":"Page_1",
     	"warning_message":"Cannot delete page 'Page_1' since it has child page(s)."
+    }],
+    "TC021":[{
+    	"username":"test",
+    	"password":"test",
+    	"page_name_1":"Page_1",
+    	"parent_page_name_1": "Overview",
+    	"page_name_2":"Page_2",
+    	"parent_page_name_2": "Page_1",
+    	"page_name_3":"Page_3",
+    	"page_name_4":"Page_4"
+    }],
+    "TC022":[{
+    	"username":"test",
+    	"password":"test",
+    	"page_name_1":"Test",
+    	"page_name_2":"Test_Child_1",
+    	"parent_page_name_2": "Test",
+    	"path_page1": "Test",
+    	"path_page2": "Test>Test_Child_1",
+    	"warning_message":"Test Child 1 already exist. Please enter a diffrerent name."
+    }],
+    "TC023":[{
+    	"username":"test",
+    	"password":"test",
+    	"page_name_1":"Page_1",
+    	"parent_page_name_1": "Overview",
+    	"page_name_2":"Page_2",
+    	"parent_page_name_2": "Page_1",
+        "page_name_3":"Page_3",
+    	"path":"Page_1"
+    }],
+    "TC024":[{
+    	"username":"test",
+    	"password":"test",
+    	"page_name_1":"Page_1",
+    	"parent_page_name_1": "Overview",
+    	"page_name_2":"Page_2",
+    	"parent_page_name_2": "Page_1",
+    	"path_page1": "Overview>Page_1",
+    	"path_page2": "Overview>Page_1>Page_2"
+    }],
+    "TC025":[{
+    	"username":"test",
+    	"password":"test",
+    	"page_name_1":"Page_1",
+    	"page_name_2":"Page_2",
+    	"parent_page_name": "Overview",
+    	"path_page2": "Page_2",
+    	"path_page2_new": "Overview>Page_2"
+    }],
+    "TC026":[{
+    	"username":"test",
+    	"password":"test",
+    	"page_name_1":"Page_1",
+    	"number_of_column_1":"2",
+    	"number_of_column_2":"3"
+    }],
+    "TC027":[{
+    	"username":"test",
+    	"password":"test",
+    	"page_name_1":"Page_1",
+    	"display_name":"zbox",
+    	"series":""
     }]
 }

@@ -14,10 +14,10 @@ public class GeneralPage {
 	private Link lnkDynamicMenu = new Link("//a[text()='%s']");
 
 	public void selectMenuPath(String pathMenu) {
-		String[] menuIterms = pathMenu.split(">");
+		String[] menuItems = pathMenu.split(">");
 
-		for (int i = 0; i < menuIterms.length; i++) {
-			lnkDynamicMenu.setDynamicValue(menuIterms[i].trim());
+		for (int i = 0; i < menuItems.length; i++) {
+			lnkDynamicMenu.setDynamicValue(menuItems[i].trim());
 			lnkDynamicMenu.waitForVisibility();
 			lnkDynamicMenu.moveTo();
 		}

@@ -32,6 +32,16 @@ public class DA_MP_TC012 extends BaseTest {
 		Log.info("Step #4: Check \"Test\" page is displayed besides \"Overview\" page");
 		Assert.assertTrue(homePage.isPageDisplayed(pageName), String.format("%s isn't displayed", pageName));
 
+
+		Log.info("Step #5: Delete newly added page");
+		homePage.deleteAddedPage(pageName, "Delete");
+
+		
+		Log.info("Step #4:Check \"Test\" page is displayed besides \"Overview\" page");
+		Assert.assertTrue(homePage.isPageDisplayed(pageName), String.format("%s isn't displayed",pageName));
+		
+		Log.info("Step #5: Delete newly added page");
+		homePage.deleteAddedPage(pageName, "Delete");
 	}
 
 	@AfterMethod

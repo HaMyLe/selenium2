@@ -6,7 +6,6 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.Hashtable;
-
 import com.google.gson.Gson;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
@@ -25,7 +24,7 @@ public class JsonHelper {
 	@SuppressWarnings("deprecation")
 	public static synchronized Object[][] getDataFile(String fileName, String testName) throws FileNotFoundException {
 
-		Object[][] data = new Object[0][1];
+		Object[][] data;
 
 		// Read json file data using Gson library
 		BufferedReader br = null;
