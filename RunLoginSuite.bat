@@ -1,0 +1,1 @@
+mvn clean test -DsuiteXmlFile=./src/test/java/SeleLv2/testsuite/LoginSuite.xml
